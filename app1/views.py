@@ -6,8 +6,8 @@ import win32com.client as win32
 
 # Create your views here.
 
-def home (request):
-    return render(request, 'app1/home.html', {})
+def index (request):
+    return render(request, 'app1/index.html', {})
 
 def contact_us (request):
 
