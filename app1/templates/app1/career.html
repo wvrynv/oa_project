@@ -1,0 +1,323 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Oliva Advisory</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/career.css' %}">
+</head>
+<body>
+	<header class="header">
+		<div class="centered-logo-menu">
+			<div class="left-header">
+				<a href="/" class="logo">
+					<img src="{%static "images/logo__full_darkmode.png" %}" alt="">
+				</a>
+			</div>
+			<div class="right-header">
+				<ul class="mnu_top" id="buttons">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="{% url 'team' %}">Team</a></li>
+					<li><a href="{% url 'projects' %}">Projects</a></li>
+					<li class="active-menu"><a href="#">Career</a></li>
+					<li class="two-words-menu"><a href="{% url 'contact_us' %}">Contact us</a></li>
+				</ul>
+			</div>
+
+            <div class="hamburger" role="navigation">
+                <div id="menuToggle">
+                    <!--
+                    A fake / hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                
+                    <ul id="menu">
+                    <a href="{% url 'home' %}"><li>Home</li></a>
+                    <a href="{% url 'team' %}"><li>Team</li></a>
+                    <a href="{% url 'projects' %}"><li>Projects</li></a>
+					<a href="{% url 'career' %}"><li>Career</li></a>
+                    <a href="{% url 'contact_us' %}"><li>Contact us</li></a>
+                    </ul>
+                </div>
+            </div>
+		</div>
+	</header>
+	<div class="lang-general">
+		<button class="lang-1">EN</button>
+		<button class="lang-2">DE</button>
+	</div>
+
+	<div class="face">
+		<div class="moto">
+			<div class="title-box"><h1>Join us!<h1></div>
+			<div class="list-container">
+				<div class="list">
+					<img class="arrow" src="{%static "images/arrow.png" %}">
+					<p>We are continuously looking for talented people</p>
+				</div>
+				<div class="list">
+					<img class="arrow" src="{%static "images/arrow.png" %}">
+					<p >If you are interested in career at Oliva Advisory, you can apply for our open positions and we will get in touch.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="block">
+		<div class="title-container-career">
+			<h2>Current jobs</h2>
+		</div>
+		<div class="jobs-container">
+			<div class="job-border">
+				<div class="job-header">
+					<p class="job-title">Business Analyst (m / f / d)</p>
+					<button id="open1a" class="plus" onclick="myFunction(open1, open1a)"></button>
+				</div>
+				<p class="job-description1 job-description" id="open1">
+					Type: Remote, full time<br>
+					Contract: Long-term with 3-month probation<br>
+					Format: Freelance
+					<br><br>
+					Your challenges:<br>
+					- Defining design guidelines for the dashboards with an orientation to specific use case<br>
+					- Blueprinting data storage setup taking data connectivity best practices and end data need into account  <br>
+					- Connecting different SaaS data to Power BI<br>
+					- Cooperating with client under Agile Project management <br>
+					- Creating Dashboards based on business requirements using Tableau and Power BI<br>
+					- Consulting clients on further data reporting, analysis and visualization  <br>
+					- Teaching dashboards capabilities to the local users<br>
+					- Migrating reports between Excel, Tableau, Power BI or other technologies<br>
+					- Existing dashboards maintenance and improvement <br>
+					- Consulting on and implementing automatic data collection process by introducing Data Automate / Power Apps solutions<br>
+
+					<br>
+					Skills we are looking for:<br>
+					- Analytical thinking<br>
+					- Expertise in Business Intelligence  tools: Power BI /Tableau<br>
+					- Fluent written/spoken German and English<br>
+					- Work experience – at least 2 years<br>
+					<br>
+					Experience with the following tools will be advantageous: <br>
+					- PowerApps, Power BI Dataflows, PowerBI Streaming Dataset, DAX, PowerQuery, M<br>
+					- Azure SQL, Azure Streaming Analytics, PostgreSQL, AWS Redshift<br>
+					- Looker, Microstrategy<br>
+				</p>
+			</div>
+			<div class="job-border">
+				<div class="job-header">
+					<p class="job-title">Talent acquisition specialist (m / f / d)</p>
+					<button id="open2a" class="plus" onclick="myFunction(open2, open2a)"></button>
+				</div>
+				<p class="job-description2 job-description" id="open2">
+					Type: Permanent job<br>
+					Location: Frankfurt am Main, Maintal <br>
+					Time conditions: Immediately or by appointment<br>
+					<br>
+					Your challenges:<br>
+					- Development of the backend and frontend applications<br>
+					- Expansion of the workflow management and CRM systems as well as their interfaces<br>
+					- Accompaniment of all activities of the software development cycle<br>
+					- Application documentation and process optimization<br>
+					<br>
+					 Knowledge required:<br>
+					- Completed degree in computer science or a comparable qualification<br>
+					- Experience in developing high-performance database applications in the .NET environment as well as in dealing with ASP.NET, WCF, MVC, JavaScript, Angular, Bootstrap, CSS<br>
+					- Sound knowledge of the programming languages C # and SQL<br>
+					- Very good German and English skills<br>
+				</p>
+			</div>
+		</div>
+		<div class="button-container">
+			<a href="{% url 'contact_us' %}">
+				<button class="button-1 button-padding">Apply now</button>
+			</a>
+		</div>
+
+	</div>
+	<div class="mid-title">
+		<div class="mid-padding">
+			<h2>Have a question?<br>
+				Check FAQ or get in touch with us!
+			</h2>
+		</div>
+	</div>
+	
+
+	<div class="FAQ-container"></div>
+
+
+	<div class="block">
+		<div class="jobs-container">
+
+			<div class="job-border">
+				<div class="job-header">
+					<p class="job-title">Do you provide remote or on-site opportunities?</p>
+					<button class="plus" id="open3a" onclick="myFunction(open3, open3a)"></button>
+				</div>
+				<p class="job-description3 job-description" id="open3">
+					We have both 100% remote and on-site employment opportunities. 
+					On-site format is possible if there is client project demand and 
+					a specialist’s preference to relocate to Germany. If relocation is 
+					needed, Oliva Advisory provides support and guidance in visa process, 
+					insurance, taxes, accommodation search, and other related questions.
+				</p>
+			</div>
+
+			<div class="job-border">
+				<div class="job-header">
+					<p class="job-title">What development opportunities do I have?</p>
+					<button class="plus" id="open4a" onclick="myFunction(open4, open4a)"></button>
+				</div>
+				<p class="job-description4 job-description" id="open4">
+					We have both German and English-spoken projects. For projects that require 
+					German knowledge, the necessary level of fluency is always indicated under 
+					respective vacancy description (in most of such projects B2 is mandatory). 
+					For other positions, English-speaking candidates are more than welcome.
+				</p>			
+			</div>
+
+
+			<div class="job-border">
+				<div class="job-header">
+					<p class="job-title">Why should I switch to Oliva Advisory?</p>
+					<button class="plus" id="open5a" onclick="myFunction(open5, open5a)"></button>
+				</div>
+				<p class="job-description5 job-description" id="open5">
+					It’s preferable to be located in the CET time zone +- 2 hours; however, 
+					if you are in another time zone and you are comfortable working full-time 
+					during German office working hours – feel free to apply.
+				</p>
+			</div>
+
+			<div class="job-border">
+				<div class="job-header">
+					<p class="job-title">Are travel expenses covered?</p>
+					<button class="plus" id="open6a" onclick="myFunction(open6, open6a)"></button>
+				</div>
+				<p class="job-description6 job-description" id="open6">
+					We offer 3-month contracts with possibility of extension, as the average project duration is 1-2 years.
+				</p>
+			</div>
+
+			<div class="job-border">
+				<div class="job-header">
+					<p class="job-title">How many hours do you work per week?</p>
+					<button class="plus" id="open7a" onclick="myFunction(open7, open7a)"></button>
+				</div>
+				<p class="job-description7 job-description" id="open7">
+					The preferred employment format is freelance based, in which a professional has a 
+					registered legal entity in his or her home country and can send invoices internationally. 
+					However, direct employment in Germany is also possible; terms and conditions are discussed 
+					with us on case-to-case basis.
+				</p>
+			</div>
+
+			<div class="job-border">
+				<div class="job-header">
+					<p class="job-title">How many hours do you work per week?</p>
+					<button class="plus" id="open8a" onclick="myFunction(open8, open8a)"></button>
+				</div>
+				<p class="job-description8 job-description" id="open8">
+					Compensation is based on your desired hourly rate. Feel free to openly communicate your expected hourly rate in the application form.
+				</p>
+			</div>
+
+			<div class="job-border">
+				<div class="job-header">
+					<p class="job-title">How many hours do you work per week?</p>
+					<button class="plus" id="open9a" onclick="myFunction(open9, open9a)"></button>
+				</div>
+				<p class="job-description9 job-description" id="open9">
+					Taxation depends on the employment scenario: for remote contract you’ll be taxed in the country of your 
+					freelance registration according to the local tax policy, whereas for direct on-site contracts you’ll be taxed 
+					according to the German tax policy as an employee of Oliva Advisory.
+				</p>
+			</div>
+
+			<div class="job-border">
+				<div class="job-header">
+					<p class="job-title">How many hours do you work per week?</p>
+					<button class="plus" id="open10a" onclick="myFunction(open10, open10a)"></button>
+				</div>
+				<p class="job-description10 job-description" id="open10">
+					Most of the projects require full-time capacity. Nonetheless, feel free to apply and 
+					specify your work capacity even if it’s less than 40 hours/week, and we’ll try to find 
+					a fitting opportunity for you 
+				</p>
+			</div>
+
+			<div class="job-border">
+				<div class="job-header">
+					<p class="job-title">How many hours do you work per week?</p>
+					<button class="plus" id="open11a" onclick="myFunction(open11, open11a)"></button>
+				</div>
+				<p class="job-description11 job-description" id="open11">
+					Your schedule will depend upon project conditions and can be clarified during the employment 
+					process. For most projects you’ll work the standard German schedule (Mo-Fri, 8 hours per day) 
+					which includes days-off for German public holidays, such as Christmas, Easter etc. However, we 
+					are also flexible to discuss your personal vacation and/or overtime days on case-to-case basis.
+				</p>
+			</div>
+			
+
+		</div>
+	</div>
+
+	<div class="block">
+		<div class="title-container-career">
+			<h2>
+			Did not find an answer?<br>
+			Get in touch with us!
+			</h2>
+		</div>
+		<div class="contact-hr">
+			<div class="buttons-hr">
+				<a href="mailto:k.verma@oliva-advisory.de">
+					<button class="button-2">Via email</button>
+				</a>
+				<a href="{% url 'contact_us' %}">
+					<button class="button-2">Via contact form</button>
+				</a>
+				<a href="https://de.linkedin.com/in/ksenia-verma-134b5865" target="_blank">
+					<button class="button-2">Via LinkedIn</button>
+				</a>
+			</div>
+			<div class="about-hr">
+				<p><span class="name-hr">Ksenia Verma<br></span>
+				<span class="position-hr">Talent Acquisition Specialist<br></span>
+				<span class="hr-says">We support you in setting up, developing, managing and maintaining your data analytics system. Several implemented projects with Tableau and PowerBI.<br><br>
+
+				We support you in setting up, developing, managing and maintaining your data analytics system.</span></p>
+				<div class="photo-hr">
+					<img src="{%static "images/KseniaV.jpg" %}">
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div>
+			<p>Imprint</p>
+		</div>
+		<div>
+			<p>© Oliva Advisory GmbH 2019</p>
+		</div>
+	</footer>
+</body>
+<script>
+	function myFunction(id_p, id_btn) {
+		if (id_p.style.display == "none"){
+			id_p.style.display = "block";
+			id_btn.className = "minus";
+		}
+		else {
+			id_p.style.display = "none";
+			id_btn.className = "plus";
+		}
+	}
+</script>

@@ -1,0 +1,288 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Oliva Advisory</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/style_grid.css' %}">
+</head>
+<body>
+	<header class=header>
+		<div class="centered-logo-menu">
+			<div class="left-header">
+				<a href="/" class="logo">
+					<img src="{%static "images/logo__full_darkmode.png" %}" alt="">
+				</a>
+			</div>
+			<div class="right-header">
+				<ul class="mnu_top" id="buttons">
+					<li class="active-menu"><a href="#">Home</a></li>
+					<li><a href="{% url 'team' %}">Team</a></li>
+					<li><a href="{% url 'projects' %}">Projects</a></li>
+					<li><a href="{% url 'career' %}">Career</a></li>
+					<li class="two-words-menu"><a href="{% url 'contact_us' %}">Contact us</a></li>
+				</ul>
+			</div>
+
+            <div class="hamburger" role="navigation">
+                <div id="menuToggle">
+                    <!--
+                    A fake / hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                
+                    <ul id="menu">
+                    <a href="{% url 'home' %}"><li>Home</li></a>
+                    <a href="{% url 'team' %}"><li>Team</li></a>
+                    <a href="{% url 'projects' %}"><li>Projects</li></a>
+					<a href="{% url 'career' %}"><li>Career</li></a>
+                    <a href="{% url 'contact_us' %}"><li>Contact us</li></a>
+                    </ul>
+                </div>
+            </div>
+		</div>
+		<div class="lang-general">
+			<button class="lang-1">EN</button>
+			<button class="lang-2">DE</button>
+		</div>
+	</header>
+	<div class="face-main">
+		<div class="moto">
+			<div class="title-box">
+				<h1>Bring analytics to your business</h1>
+			</div>
+			<div class="desktop-list">
+				<div class="list-container">
+					<div class="list">
+						<img class="arrow" src="{%static "images/arrow.png" %}">
+						<p>Data Analytics & Business Intelligence</p>
+					</div>
+					<div class="list">
+						<img class="arrow" src="{%static "images/arrow.png" %}">
+						<p>Artificial Intelligence and Machine Learning</p>
+					</div>
+					<div class="list">
+						<img class="arrow" src="{%static "images/arrow.png" %}">
+						<p>IT Recruiting, Freelancing & Hiring</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="gif">
+			<img src="{%static "images/Aaaa.gif" %}">
+			<div clas="q">
+				<img class="q" src="{%static "images/q.png" %}">
+			</div>
+		</div>
+		<div class="mobile-list">
+			<div class="list-container">
+				<div class="list">
+					<img class="arrow" src="{%static "images/arrow.png" %}">
+					<p>Data Analytics & Business Intelligence</p>
+				</div>
+				<div class="list">
+					<img class="arrow" src="{%static "images/arrow.png" %}">
+					<p>Artificial Intelligence and Machine Learning</p>
+				</div>
+				<div class="list">
+					<img class="arrow" src="{%static "images/arrow.png" %}">
+					<p>IT Recruiting, Freelancing & Hiring</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="under-face-container">
+		<a href="{% url 'contact_us' %}">
+			<button class="button-1">Contact us</button>
+		</a>
+	</div>
+	
+	<div class="block">
+		<div class="title-container-1">
+			<h2>Our expertise</h2>
+		</div>
+		<div class="columns-1">
+			<div class="col1">
+				<div class="title1">
+					<div class="number1">
+						<img src="{%static 'images/num1.png' %}">
+					</div>
+					<div class="title-text1">
+						Data Analytics & Business Intelligence
+					</div>
+				</div>
+			</div>
+			<div class="col2">
+				<div class="title1">
+					<div class="number1">
+						<img src="{%static 'images/num2.png' %}">
+					</div>
+					<div class="title-text1">
+						Artificial Intelligence & Machine Learning
+					</div>
+				</div>
+			</div>
+			<div class="col3">
+				<div class="title1">
+					<div class="number1">
+						<img src="{%static 'images/num3.png' %}">
+					</div>
+					<div class="title-text1">
+						IT Recruiting, Freelancing & Hiring
+					</div>
+				</div>
+			</div>
+			<div class="row1">
+				<div class="text1-fake">
+					<div class="margin-left">
+					</div>
+					<div class="text1">
+						We support you in setting up, developing, managing and maintaining your data analytics system. Several implemented projects with Tableau and PowerBI.
+					</div>
+				</div>
+			</div>
+			<div class="row2">
+				<div class="text1-fake">
+					<div class="margin-left">
+					</div>
+					<div class="text1">
+						We use machine learning tools and algorithms to help companies develop AI-driven products and solutions. Designing, implementing, and integrating artificial intelligence solutions.
+					</div>
+				</div>
+			</div>
+			<div class="row3">
+				<div class="text1-fake">
+					<div class="margin-left">
+					</div>
+					<div class="text1">
+						We recruit and staff IT Consultants | Developers | Scrum Masters | Business Analysts & Project Managers (full-time employees or on a freelance basis).
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="parsable-container">
+		<p>We proudly are a trusted partner of:</p>
+		<div>
+			<img src="{%static 'images/parsable.png' %}">
+		</div>
+	</div>
+	<div class="block">
+		<div class="title-container-1">
+			<h2>Our clients</h2>
+		</div>
+		<div class="clients-container">
+			<div class="map-container">
+				<!--
+				<div class='tableauPlaceholder' id='viz1635490396708' style='position: relative'>
+				<noscript>
+				<a href='#'>
+					<img alt='Customer map ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CustomerMap_16353427766700&#47;Customermap&#47;1_rss.png' style='border: none' />
+				</a>
+				</noscript>
+				<object class='tableauViz'  style='display:none;'>
+				<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+				<param name='embed_code_version' value='3' /> 
+				<param name='site_root' value='' />
+				<param name='name' value='CustomerMap_16353427766700&#47;Customermap' />
+				<param name='tabs' value='no' />
+				<param name='toolbar' value='yes' />
+				<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CustomerMap_16353427766700&#47;Customermap&#47;1.png' /> 
+				<param name='animate_transition' value='yes' />
+				<param name='display_static_image' value='yes' />
+				<param name='display_spinner' value='yes' />
+				<param name='display_overlay' value='yes' />
+				<param name='display_count' value='yes' />
+				<param name='language' value='en-US' />
+				</object>
+				</div>                
+				<script type='text/javascript'> var divElement = document.getElementById('viz1635490396708'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='927px';} 
+				else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='927px';} 
+				else { vizElement.style.width='100%';vizElement.style.height='727px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+				</script>
+				-->
+			</div>
+		</div>
+	</div>
+	<div class="block">
+		<div class="title-container-1">
+			<h2>What we can do<br>for your business</h2>
+		</div>
+		<div class="rows">
+			<div class="nums">
+				<img src="{%static 'images/num1.png' %}">
+			</div>
+			<div class="text-do">
+				<p class="titles">Tableau </p>
+				<p class="regular-text">
+					In Tableau we display data in a graphical user interface via drag and drop. Individual data analyses can be compiled in dashboards and linked with each other.
+				</p>
+			</div>
+			<div class="pictures-container">
+				<img src="{%static 'images/Tableau.png' %}">
+			</div>
+		</div>
+		<div class="rows">
+			<div class="nums">
+				<img src="{%static 'images/num2.png' %}">
+			</div>
+			<div class="text-do">
+				<p class="titles">Power BI</p>
+				<p class="regular-text">
+					Power BI transforms your company’s data into visual representations. We collect and structure your data and focus your attention on what is most important to you.
+				</p>
+			</div>
+			<div class="pictures-container">
+				<img src="{%static 'images/PowerBI.png' %}">
+			</div>
+		</div>
+		<div class="rows">
+			<div class="nums">
+				<img src="{%static 'images/num3.png' %}">
+			</div>
+			<div class="text-do">
+				<p class="titles">Mobile friendly</p>
+				<p class="regular-text">
+					Our reports can be displayed in mobile applications, bringing analytics to your business at any given time.
+				</p>
+			</div>
+			<div class="pictures-container phone-picture">
+				<img src="{%static 'images/Mobile.png' %}">
+			</div>
+		</div>
+
+	</div>
+	<div class="main-last">
+		<div class="logo-main-2">
+			<img src="{%static 'images/logo__full_darkmode.png' %}">
+		</div>
+		<div class="about-contact">
+			<div class="short-about">
+				<p>
+					We are a young dynamic team, that tries to be ahead of the curve in data science as well as designs. We thrive to deliver high quality products that grant our clients the most valuable insights.
+				</p>
+			</div>
+			<div class="button-contact-last">
+				<a href="{% url 'contact_us' %}">
+					<button class="button-1">Contact us</button>
+				</a>
+			</div>
+		</div>
+	</div>
+	<footer class="mobile">
+		<div>
+			<p>Imprint</p>
+		</div>
+		<div>
+			<p>© Oliva Advisory GmbH 2019</p>
+		</div>
+	</footer>
+</body>
+</html>

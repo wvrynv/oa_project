@@ -1,0 +1,1105 @@
+html {
+	margin: 0 auto;
+
+}
+
+                                @font-face{
+                                    font-family: "extra-bold";
+                                    src: url(fonts/Open_Sans/OpenSans-ExtraBold.ttf);
+                                }
+
+                                @font-face{
+                                    font-family: "regular";
+                                    src: url(fonts/Open_Sans/OpenSans-Regular.ttf);
+                                }
+
+                                @font-face{
+                                    font-family: "bold";
+                                    src: url(fonts/Open_Sans/OpenSans-Bold.ttf);
+                                }
+
+                                @font-face{
+                                    font-family: "light";
+                                    src: url(fonts/Open_Sans/OpenSans-Light.ttf);
+                                }
+
+                                @font-face{
+                                    font-family: "semibold";
+                                    src: url(fonts/Open_Sans/OpenSans-SemiBold.ttf);
+                                }
+
+img {
+	max-width: 100%;
+}
+
+body {
+	font-family: "regular";
+	background-color: #03002A;
+	width:100%;
+	height:100%;
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 158px;
+}
+
+                                                                    @media all and (min-width: 2300px) {
+                                                                        header {
+                                                                            max-width: 2000px;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 2300px) and (min-width: 1280px) {
+                                                                        header {
+                                                                            width: 80%;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 1280px) and (min-width: 992px) {
+                                                                        header {
+                                                                            width: 90%;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 992px) and (min-width: 767px) {
+                                                                        header {
+                                                                            width: 90%;
+                                                                            margin: 0 auto;
+                                                                            height: 60px;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 767px) and (min-width: 414px) {
+                                                                        header {
+                                                                            max-width: 100%;
+                                                                            margin: 0px 25px 0px 25px;
+                                                                            height: 50px;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 414px) {
+                                                                        header {
+                                                                            max-width: 100%;
+                                                                            margin: 0px 25px 0px 25px;
+                                                                            height: 40px;
+                                                                        }
+                                                                    }
+
+
+.centered-logo-menu {
+	margin-top: 100px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+
+
+.left-header {
+	width: 50%;
+}
+
+.logo img{
+	filter: drop-shadow(0px 3px 6px #000000);
+}
+
+                                                                    @media all and (min-width: 2300px){
+                                                                        .logo img {
+                                                                            width: 45%;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                        .logo {
+                                                                            margin-left: -9%;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 2300px) and (min-width: 1280px){
+                                                                        .logo img {
+                                                                            width: 40%;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                        .logo {
+                                                                            margin-left: -8%;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 1280px) and (min-width: 992px){
+                                                                        .logo img {
+                                                                            width: 300px;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                        .logo {
+                                                                            margin-left: 0px;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 992px) and (min-width: 767px){
+                                                                        .logo img {
+                                                                            width: 330px;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                        .logo {
+                                                                            margin-left: 0px;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 767px){
+                                                                        .logo img {
+                                                                            width: 330px;
+                                                                        }
+                                                                        .logo {
+                                                                            margin-left: 0%;
+                                                                        }
+                                                                        .right-header-mobile {
+                                                                            display: block;
+                                                                            right: 0%;
+                                                                        }
+                                                                    }
+
+.right-header {
+	width: 50%;
+	margin-right: -2%
+}
+
+.right-header-mobile {
+	display: none;
+}
+
+                                                                    @media all and (max-width: 1200px){
+                                                                        .right-header {
+                                                                            display: none;
+                                                                        }
+
+                                                                        .right-header-mobile {
+                                                                            display: block;
+                                                                        }
+
+                                                                        .mnu_top {
+                                                                            display: none;
+                                                                        }
+
+                                                                        .right-header-mobile img {
+                                                                            width: 50px;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 500px) {
+                                                                        .right-header-mobile img {
+                                                                            width: 40px;
+                                                                        }
+                                                                    }
+
+                                                                    header .mnu_top {
+                                                                        list-style-type: none;
+                                                                        display: flex;
+                                                                        flex-direction: row;
+                                                                        flex-wrap: nowrap;
+                                                                        justify-content: flex-end;
+                                                                    }
+
+
+                                                                    header .mnu_top li a {
+                                                                        text-decoration: none;
+                                                                        color: #E6E6F6;
+                                                                        font-family: "semibold";
+                                                                    }
+
+.active-menu li a {
+	text-decoration: none;
+	color: green;
+	font-family: "semibold";
+}
+
+#buttons li {
+	border: none;
+	background-color: none;
+	padding-right: 25px;
+	padding-left: 25px;
+	padding-top: 12px;
+	padding-bottom: 10px;
+	line-height: 33px;
+	font-size: 33px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-radius: 13px;
+}
+
+.active-menu {
+	color: red;
+	background: linear-gradient(#08F7C5, #00CA73);
+	filter: drop-shadow(0px 3px 6px #000000);
+}
+
+#buttons li:hover {
+	background-color: rgb(255, 255, 255, .25);
+}
+
+
+                                                                    @media all and (max-width: 2300px) and (min-width: 1880px){
+                                                                        #buttons li {
+                                                                            
+                                                                            padding-left: 25px;
+                                                                            padding-right: 25px;
+                                                                            padding-top: 12px;
+                                                                            padding-bottom: 10px;
+                                                                            line-height: 33px;
+                                                                            font-size: 30px;
+                                                                            margin-left: 17px;
+                                                                            margin-right: 17px;
+                                                                            border-radius: 13px;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 1880px) and (min-width: 1500px){
+                                                                        #buttons li {
+                                                                            
+                                                                            padding-left: 25px;
+                                                                            padding-right: 25px;
+                                                                            padding-top: 7px;
+                                                                            padding-bottom: 5px;
+                                                                            line-height: 33px;
+                                                                            font-size: 25px;
+                                                                            margin-left: 15px;
+                                                                            margin-right: 15px;
+                                                                            border-radius: 13px;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 1500px) and (min-width: 992px){
+                                                                        #buttons li {
+                                                                            
+                                                                            padding-left: 25px;
+                                                                            padding-right: 25px;
+                                                                            padding-top: 7px;
+                                                                            padding-bottom: 5px;
+                                                                            line-height: 33px;
+                                                                            font-size: 22px;
+                                                                            margin-left: 12px;
+                                                                            margin-right: 12px;
+                                                                            border-radius: 13px;
+                                                                        }
+                                                                    }
+
+.two-words-menu {
+	white-space: nowrap;
+}
+
+.face {
+	display: flex;
+	align-items: center;
+	color: #F2F2F7;
+	justify-content: space-between;
+}
+
+.moto {
+	font-size: 48px;
+	font-family: "bold";
+	color: #F2F2F7;
+	width: 100%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.title-box {
+	padding-top: 10%;
+}
+
+                                                                    @media (min-width: 2300px){
+                                                                        .face {
+                                                                            max-width: 2000px;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                        .moto {
+                                                                            font-size: 48px;
+                                                                        }
+                                                                    }
+
+                                                                    @media (max-width: 2300px) and (min-width: 1280px) {
+                                                                        .face {
+                                                                            width: 80%;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                        .moto {
+                                                                            font-size: 40px;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 1280px) and (min-width: 992px) {
+                                                                        .face {
+                                                                            width: 90%;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                        .moto {
+                                                                            font-size: 35px;
+                                                                        }
+                                                                        .title-box {
+                                                                            margin-left: 5%;
+                                                                            margin-bottom: 40px;
+                                                                        }
+                                                                    }
+
+                                                                    @media (max-width: 992px) and (min-width: 767px) {
+                                                                        .face {
+                                                                            width: 90%;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                        .moto {
+                                                                            font-size: 30px;
+                                                                        }
+                                                                        .title-box {
+                                                                            margin-top: 30px;
+                                                                            margin-left: 6%;
+                                                                            margin-bottom: 40px;
+                                                                        }
+
+                                                                    }
+
+                                                                    @media (max-width: 767px) and (min-width: 600px){
+                                                                        .face {
+                                                                            width: 100%;
+                                                                            margin: 0px 25px 0px 25px;
+                                                                        }
+                                                                        .moto {
+                                                                            font-size: 26px;
+                                                                        }
+                                                                        .title-box {
+                                                                            margin-left: 6%;
+                                                                            margin-bottom: 30px;
+                                                                        }
+                                                                    } 
+
+                                                                    @media (max-width: 767px) and (min-width: 600px){
+                                                                        .face {
+                                                                            width: 100%;
+                                                                            margin: 0px 25px 0px 25px;
+                                                                        }
+                                                                        .moto {
+                                                                            font-size: 26px;
+                                                                        }
+                                                                        .title-box {
+                                                                            margin-left: 7%;
+                                                                            margin-top: 30px;
+                                                                            margin-bottom: 20px;
+                                                                        }
+                                                                    } 
+
+                                                                    @media (max-width: 600px) and (min-width: 500px) {
+                                                                        .face {
+                                                                            width: 100%;
+                                                                            margin: 0px 25px 0px 25px;
+                                                                        }
+                                                                        .moto {
+                                                                            font-size: 23px;
+                                                                        }
+                                                                        .title-box {
+                                                                            margin-top: 30px;
+                                                                            margin-left: 9.5%;
+                                                                            margin-bottom: 20px;
+                                                                        }
+                                                                    }
+
+                                                                    @media (max-width: 500px) and (min-width: 414px) {
+                                                                        .face {
+                                                                            width: 100%;
+                                                                            margin: 0px 25px 0px 25px;
+                                                                        }
+                                                                        .moto {
+                                                                            font-size: 20px;
+                                                                        }
+                                                                        .title-box {
+                                                                            margin-top: 30px;
+                                                                            margin-left: 11%;
+                                                                            margin-bottom: 20px;
+                                                                        }
+                                                                    }
+
+
+                                                                    @media (max-width: 414px) and (min-width: 350px)  {
+                                                                        .face {
+                                                                            width: 100%;
+                                                                            margin: 0px 25px 0px 25px;
+                                                                        }
+                                                                        .moto {
+                                                                            font-size: 18px;
+                                                                        }
+                                                                        .title-box {
+                                                                            margin-top: 30px;
+                                                                            margin-left: 13%;
+                                                                            margin-bottom: 30px;
+                                                                        }
+                                                                    }
+
+                                                                    @media (max-width: 350px) {
+                                                                        .face {
+                                                                            width: 100%;
+                                                                            margin: 0px 25px 0px 25px;
+                                                                        }
+                                                                        .moto {
+                                                                            font-size: 18px;
+                                                                        }
+                                                                        .title-box {
+                                                                            margin-top: 30px;
+                                                                            margin-left: 0%;
+                                                                            margin-bottom: 30px;
+                                                                        }
+                                                                    }
+
+.list-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	line-height: normal;
+}
+
+.list {
+	font-size: 36px;
+	color: #F2F2F7;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 30px;
+	flex-wrap: nowrap;
+}
+
+
+.list p {
+	font-family: "semibold";
+	margin: -25px 0px 25px 0px;
+	padding: 0px 50px 0px 0px;
+	line-height: 50px;
+    white-space: normal
+}
+
+
+                                                                    @media all and (max-width: 1200px) and (min-width: 992px) {
+                                                                        .list {
+                                                                            font-size: 30px;
+                                                                        }
+                                                                        .list p {
+                                                                            line-height: 36px;
+                                                                        }
+
+                                                                    }
+
+                                                                    @media all and (max-width: 992px) and (min-width: 767px) {
+                                                                        .list {
+                                                                            font-size: 30px;
+                                                                        }
+                                                                        .list p {
+                                                                            line-height: 36px;
+                                                                        }
+
+                                                                    }
+
+                                                                    @media all and (max-width: 767px) and (min-width: 600px){
+                                                                        .list {
+                                                                            font-size: 30px;
+                                                                        }
+                                                                        .list p {
+                                                                            line-height: 32px;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 600px) and (min-width: 414px){
+                                                                        .list {
+                                                                            font-size: 22px;
+                                                                        }
+                                                                        .list p {
+                                                                            line-height: 28px;
+                                                                        }
+                                                                    }
+
+                                                                    @media (max-width: 414px) {
+                                                                        .list {
+                                                                            font-size: 18px;
+                                                                        }
+                                                                        .list p {
+                                                                            line-height: 27px;
+                                                                        }
+                                                                    }
+
+.arrow {
+	margin-right: 33px;
+	width: 20px;
+	min-width: 20px;
+	margin-bottom: 47px;
+	filter: drop-shadow(0px 3px 6px #000000);
+}
+
+.button-1 {
+	width: 490px;
+	height: 103px;
+	position: relative;
+	border: 6px solid transparent;
+	border-radius: 28px;
+	background: #03002A;
+	background-clip: padding-box;
+	color: #E6E6F6;
+	font-family: "extra-bold";
+	font-size: 33px;
+	margin-top: 70px;
+	filter: drop-shadow(0px 3px 6px #000000);
+}
+
+
+.button-1::after {
+	position: absolute;
+	top: -6px; bottom: -6px;
+	left: -6px; right: -6px;
+	background: linear-gradient(#08F7C5, #00CA73);
+	content: '';
+	z-index: -1;
+	border-radius: 28px;
+}
+
+.button-1:hover {
+	background: #E6E6F6;
+	background-clip: padding-box;
+	color: #03002A;
+}
+
+.button-1:hover:after {
+	background: linear-gradient(#08F7C5, #00CA73);
+}
+
+                            .lang-general {
+                                left: 0px;
+                                top: 270px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                                justify-content: flex-start;
+                                position: relative;
+
+                                display: none;
+                            }
+
+                            .lang-1 {
+                                background-color: #4a667b80;
+                                color: #E6E6F6;
+                                width: 106px;
+                                height: 50px;
+                                border-radius: 8px 0px 0px 8px;
+                                border-width: 0px;
+                                padding-left: 10px;
+                                text-align: left;
+                                font-family: "semibold";
+                                font-size: 27px;
+
+                                display: none;
+                            }
+
+                            .lang-2 {
+                                background-color: #4a667b80;
+                                color: #03002A;
+                                border-radius: 8px 0px 0px 8px;
+                                border-width: 0px;
+                                width: 74px;
+                                height: 50px;
+                                margin-top: 7px;
+                                padding-left: 10px;
+                                text-align: left;
+                                font-family: "semibold";
+                                font-size: 27px;
+
+                                display: none;
+
+                            }
+
+.block2222222 {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+                                                                    @media (min-width: 2300px){
+                                                                        .block2222222 {
+                                                                            max-width: 2000px;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                    }
+
+                                                                    @media (max-width: 2300px) and (min-width: 1280px){
+                                                                        .block2222222 {
+                                                                            width: 80%;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                    }
+
+
+                                                                    @media all and (max-width: 1280px) and (min-width: 992px){
+                                                                        .block2222222 {
+                                                                            width: 90%;
+                                                                            margin: 0 auto;
+                                                                        }
+                                                                    }
+
+                                                                    @media all and (max-width: 992px){
+                                                                        .block2222222 {
+                                                                            width: 100%;
+                                                                            margin: 0px 25px 0px 25px;
+                                                                        }
+                                                                    }
+
+
+footer {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E6E6F6;
+    font-size: 29px;
+    font-family: "bold";
+    bottom: 0px;
+}
+
+
+                                                                    @media all and (max-width: 992px){
+                                                                            
+                                                                        footer {
+                                                                            height: 70px;
+                                                                            width: 100%;
+                                                                            display: flex;
+                                                                            flex-direction: row;
+                                                                            justify-content: space-around;
+                                                                            align-items: center;
+                                                                            background-color: #E6E6F6;
+                                                                            font-size: 29px;
+                                                                            font-family: "bold";
+                                                                            bottom: 0px;
+                                                                        }
+                                                                    }
+/* next part is different */
+
+
+.title-container-team {
+	font-size: 64px;
+	font-family: "bold";
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	color: #F2F2F7;
+}
+
+.team-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 200px;
+}
+
+                                                                    @media all and (max-width: 992px){
+                                                                        .team-container {
+                                                                            margin-top: 20px;
+                                                                            margin-bottom: 20px;
+                                                                        }
+                                                                    }
+
+.about-member {
+	position: relative;
+	border-radius: 37px;
+	background: #03002A;
+	background-clip: border-box;
+	width: 27%;
+	flex-direction: column;
+	display: flex;
+	font-family: "regular";
+	color: #F2F2F7;
+
+	justify-content: flex-end;
+	padding: 20px 20px 30px 20px;
+	margin: 0 auto;
+	margin-bottom: 250px;
+	margin-top: 50px;
+}
+
+
+                                                            @media all and (max-width: 1880px) and (min-width: 1280px){
+                                                                .about-member {
+                                                                    width: 37%;
+                                                                    padding: 20px 20px 30px 20px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 1280px) and (min-width: 992px){
+                                                                .about-member {
+                                                                    width: 40%;
+                                                                    padding: 20px 20px 30px 20px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 992px) {
+                                                                .about-member {
+                                                                    width: 70%;
+                                                                    padding: 20px 20px 20px 20px;
+                                                                    margin-bottom: 50px;
+                                                                    border-radius: 12px;
+                                                                    width: 80%;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 600px) and (min-width: 400px) {
+                                                                .about-member {
+                                                                    width: 70%;
+                                                                    padding: 20px 20px 20px 20px;
+                                                                    margin-top: 0px;
+                                                                    margin-bottom: 60px;
+                                                                    border-radius: 12px;
+                                                                    width: 80%;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 400px) {
+                                                                .about-member {
+                                                                    margin-left: -0px;
+                                                                    margin-top: 0px;
+                                                                    margin-bottom: 60px;
+                                                                    border-radius: 12px;
+                                                                }
+                                                            }
+
+.about-member::after {
+	position: absolute;
+	top: -6px; bottom: -6px;
+	left: -6px; right: -6px;
+	background: linear-gradient(#08F7C5, #00CA73);
+	content: '';
+	z-index:-1;
+	border-radius: 40px;	
+	filter: drop-shadow(0px 3px 6px #000000);
+}
+
+                                                            @media all and (max-width: 992px){	
+                                                                .about-member::after {
+                                                                    top: -6px; bottom: -6px;
+                                                                    left: -6px; right: -6px;
+                                                                    border-radius: 18px;
+                                                                }
+                                                            }
+
+.name-member{
+	font-family: "bold";
+	font-size: 45px;
+	line-height: 60px;
+}
+
+.position-member {
+	font-family: "bold";
+	font-size: 30px;
+	line-height: 80px;
+}
+
+                                                            @media all and (max-width: 1475px) {
+                                                                .name-member {
+                                                                    font-size: 35px;
+                                                                }
+                                                                .position-member {
+                                                                    font-size: 25px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 1350px) {
+                                                                .name-member {
+                                                                        
+                                                                }
+                                                                .position-member {
+                                                                    font-size: 20px;
+                                                                    white-space: nowrap;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 992px) and (min-width: 600px) {
+                                                                .name-member{
+                                                                    font-size: 30px;
+                                                                    line-height: 40px;
+                                                                }
+                                                                .position-member {
+                                                                    font-size: 25px;
+                                                                    line-height: 38px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 600px) and (min-width: 465px){
+                                                                .name-member{
+                                                                    font-size: 25px;
+                                                                    line-height: 30px;
+                                                                }
+                                                                .position-member {
+                                                                    font-size: 20px;
+                                                                    line-height: 30px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 465px){
+                                                                .name-member{
+                                                                    font-size: 20px;
+                                                                    line-height: 30px;
+                                                                }
+                                                                .position-member {
+                                                                    font-size: 16px;
+                                                                    line-height: 30px;
+                                                                }
+                                                            }
+
+.member-says {
+	font-family: "regular";
+	font-size: 30px;
+	line-height: normal;
+}
+
+                                                            @media all and (max-width: 1675px) {
+                                                                .member-says {
+                                                                    font-size: 25px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 992px) and (min-width: 600px) {
+                                                                .member-says {
+                                                                    font-size: 25px;
+                                                                    line-height: normal;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 600px) {
+                                                                .member-says {
+                                                                    font-size: 22px;
+                                                                    line-height: normal;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 600px) {
+                                                                .member-says {
+                                                                    font-size: 17px;
+                                                                    line-height: normal;
+                                                                }
+                                                            }
+
+
+.photo-member {
+	display: block;
+    margin: 10px auto 20px;
+	position: absolute;
+	right: -7px;
+	bottom: 80%;
+	filter: drop-shadow(0px 3px 6px #000000);
+}
+
+                                                            @media all and (max-width: 1880px) and (min-width: 992px){
+                                                                .photo-member {
+                                                                    bottom: 77%;
+                                                                }
+                                                            }
+
+.photo-member img{
+	height: 250px;
+	border-radius: 40px 40px 0px 40px;
+	border-width: 0px;
+	z-index: +1;
+}
+
+                                                            @media all and (max-width: 992px) and (min-width: 600px) {
+                                                                .photo-member {
+                                                                    right: -7px;
+                                                                    top: -17px;
+                                                                }
+
+	.photo-member img {
+		height: 150px;
+		border-radius: 0px 12px 0px 12px;
+		border-width: 0px;
+		z-index: 1;
+	}
+}
+
+                                                            @media all and (max-width: 600px) {
+                                                                .photo-member {
+                                                                    right: -7px;
+                                                                    top: -17px;
+                                                                }
+
+	.photo-member img {
+		height: 135px;
+		border-radius: 0px 12px 0px 12px;
+		border-width: 0px;
+		z-index: 1;
+	}
+}
+
+                                                            @media all and (min-width: 2300px) {
+                                                                .list-container-bottom {
+                                                                    max-width: 2000px;
+                                                                    margin: 0 auto;
+                                                                }
+                                                                .compensate-margin {
+                                                                    margin-top: -100px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 2300px) and (min-width: 1280px) {
+                                                                .list-container-bottom {
+                                                                    max-width: 80%;
+                                                                    margin: 0 auto;
+                                                                }
+                                                                .compensate-margin {
+                                                                    margin-top: -100px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 1280px) and (min-width: 992px) {
+                                                                .list-container-bottom {
+                                                                    max-width: 90%;
+                                                                    margin: 0 auto;
+                                                                }
+                                                                .compensate-margin {
+                                                                    margin-top: -100px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 992px) and (min-width: 767px) {
+                                                                .list-container-bottom {
+                                                                    max-width: 90%;
+                                                                    margin: 0 auto;
+                                                                }
+                                                                .compensate-margin {
+                                                                    margin-left: 5%;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 767px) {
+                                                                .list-container-bottom {
+                                                                    width: 100%;
+                                                                    margin: 0px 25px 0px 25px;
+                                                                }
+                                                                .compensate-margin {
+                                                                    margin-left: 10%;
+                                                                }
+                                                            }
+
+.join-us-text {
+    font-family: "bold";
+    font-size: 27px;
+    color: #E6E6F6;
+}
+
+                                                            @media all and (max-width: 465px) {
+                                                                .join-us-text {
+                                                                    font-size: 20px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 767px){
+                                                                .compensate-margin {
+                                                                    margin-left: 7%;
+                                                                }
+                                                            }
+
+.careers {
+	margin-bottom: 260px;
+}
+
+                                                            @media all and (max-width: 767px){
+                                                                .careers {
+                                                                    margin-bottom: 70px;
+                                                                }
+                                                            }
+
+                                                            @media  all and (max-width: 992px){
+                                                                
+                                                                .button-1 {
+                                                                    width: 300px;
+                                                                    height: 60px;
+                                                                    position: relative;
+                                                                    border: 4px solid transparent;
+                                                                    border-radius: 12px;
+                                                                    background: #03002A;
+                                                                    background-clip: padding-box;
+                                                                    color: #E6E6F6;
+                                                                    font-family: "semibold";
+                                                                    font-size: 20px;
+                                                                    margin-top: 40px;
+                                                                }
+
+                                                                .button-1::after {
+                                                                    position: absolute;
+                                                                    top: -4px; bottom: -4px;
+                                                                    left: -4px; right: -4px;
+                                                                    background: linear-gradient(#08F7C5, #00CA73);
+                                                                    content: '';
+                                                                    z-index: -1;
+                                                                    border-radius: 12px;
+                                                                }
+
+                                                                .button-1:hover {
+                                                                    background: #E6E6F6;
+                                                                    background-clip: padding-box;
+                                                                    color: #03002A;
+                                                                }
+
+                                                                .button-1:hover:after {
+                                                                    background: linear-gradient(#08F7C5, #00CA73);
+                                                                }
+
+                                                            }
+
+
+.linkedin {
+	position: absolute;
+	filter: drop-shadow(0px 3px 6px #000000);
+}
+
+
+                                                            @media all and (min-width: 1280px) {
+                                                                .linkedin {
+                                                                    width: 50px;
+                                                                    top: -72px;
+                                                                    right: 263px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 1280px) and (min-width: 992px) {
+                                                                .linkedin {
+                                                                    width: 50px;
+                                                                    top: -72px;
+                                                                    right: 260px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 992px) and (min-width: 600px) {
+                                                                .linkedin {
+                                                                    width: 45px;
+                                                                    top: 15px;
+                                                                    right: 156px;
+                                                                }
+                                                            }
+
+
+                                                            @media all and (max-width: 600px) and (min-width: 400px) {
+                                                                .linkedin {
+                                                                    width: 45px;
+                                                                    top: 10px;
+                                                                    right: 135px;
+                                                                }
+                                                            }
+
+                                                            @media all and (max-width: 400px) {
+                                                                .linkedin {
+                                                                    width: 40px;
+                                                                    top: 10px;
+                                                                    right: 135px;
+                                                                }
+                                                            }
+
