@@ -1393,7 +1393,6 @@ footer {
 							}
 
 .clients-container {
-	background-color: darkcyan;
 	margin: 0 auto;
 	padding-top: 0px;
 	padding-bottom: 0px;
@@ -1775,7 +1774,6 @@ footer {
 .main-last {
 	display: flex;
 	flex-direction: column;
-	background-color: aquamarine;
 }
 
 .logo-main-2 {

@@ -833,49 +833,49 @@ footer {
 	margin-top: 50px;
 }
 
-@media all and (max-width: 1880px) and (min-width: 1280px){
-	.about-member {
-		width: 37%;
-		padding: 20px 20px 30px 20px;
-	}
-}
+								@media all and (max-width: 1880px) and (min-width: 1280px){
+									.about-member {
+										width: 37%;
+										padding: 20px 20px 30px 20px;
+									}
+								}
 
-@media all and (max-width: 1280px) and (min-width: 992px){
-	.about-member {
-		width: 40%;
-		padding: 20px 20px 30px 20px;
-	}
-}
+								@media all and (max-width: 1280px) and (min-width: 992px){
+									.about-member {
+										width: 40%;
+										padding: 20px 20px 30px 20px;
+									}
+								}
 
-@media all and (max-width: 992px) {
-	.about-member {
-		width: 70%;
-		padding: 20px 20px 20px 20px;
-		margin-bottom: 50px;
-		border-radius: 12px;
-		width: 80%;
-	}
-}
+								@media all and (max-width: 992px) {
+									.about-member {
+										width: 70%;
+										padding: 20px 20px 20px 20px;
+										margin-bottom: 50px;
+										border-radius: 12px;
+										width: 80%;
+									}
+								}
 
-@media all and (max-width: 600px) and (min-width: 400px) {
-	.about-member {
-		width: 70%;
-		padding: 20px 20px 20px 20px;
-		margin-top: 0px;
-		margin-bottom: 60px;
-		border-radius: 12px;
-		width: 80%;
-	}
-}
+								@media all and (max-width: 600px) and (min-width: 400px) {
+									.about-member {
+										width: 70%;
+										padding: 20px 20px 20px 20px;
+										margin-top: 0px;
+										margin-bottom: 60px;
+										border-radius: 12px;
+										width: 80%;
+									}
+								}
 
-@media all and (max-width: 400px) {
-	.about-member {
-		margin-left: -0px;
-		margin-top: 0px;
-		margin-bottom: 60px;
-		border-radius: 12px;
-	}
-}
+								@media all and (max-width: 400px) {
+									.about-member {
+										margin-left: -0px;
+										margin-top: 0px;
+										margin-bottom: 60px;
+										border-radius: 12px;
+									}
+								}
 
 .about-member::after {
 	position: absolute;
@@ -888,13 +888,13 @@ footer {
 	filter: drop-shadow(0px 3px 6px #000000);
 }
 
-@media all and (max-width: 992px){	
-	.about-member::after {
-		top: -6px; bottom: -6px;
-		left: -6px; right: -6px;
-		border-radius: 18px;
-	}
-}
+								@media all and (max-width: 992px){	
+									.about-member::after {
+										top: -6px; bottom: -6px;
+										left: -6px; right: -6px;
+										border-radius: 18px;
+									}
+								}
 
 .name-member{
 	font-family: "bold";
