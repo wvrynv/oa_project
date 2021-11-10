@@ -25,7 +25,7 @@ def contact_us (request):
             "Message from web-site, from " + message_name, #subject
             text, #message
             message_email, #from email
-            ["marina.samoilenko6@gmail.com"], #to email(s)
+            ["k.verma@oliva-advisory.de"], #to email(s)
         )
         
         return render(request, 'app1/contact_us.html', {'message_name': message_name})

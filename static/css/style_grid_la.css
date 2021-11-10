@@ -310,7 +310,7 @@ header .mnu_top li a {
 							height: 32px;
 							position: absolute;
 
-							
+
 							cursor: pointer;
 							opacity: 0; /* hide this */
 							z-index: 2; /* and place it over the hamburger */
@@ -323,14 +323,14 @@ header .mnu_top li a {
 							height: 4px;
 							margin-bottom: 5px;
 							position: relative;
-							
+
 							background: #F2F2F7;
 							border-radius: 3px;
-							
+
 							z-index: 1;
-							
+
 							transform-origin: 4px 0px;
-							
+
 							transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
 										background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
 										opacity 0.55s ease;
@@ -371,15 +371,15 @@ header .mnu_top li a {
 							margin: -43px 0px 0px -130px;
 							padding: 40px 40px 10px 10px;
 							text-align: right;
-							
+
 							background: #F2F2F7;
 							list-style-type: none;
 							-webkit-font-smoothing: antialiased;
 							/* to stop flickering of text in safari */
-							
+
 							transform-origin: 0% 0%;
 							transform: translate(0%, 0);
-							
+
 							transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 						}
 
@@ -444,7 +444,7 @@ header .mnu_top li a {
 	display: grid;
     grid-template-columns: 60% 40%;
 	color: #E6E6F6;
-    
+
     padding-top: 5%;
 }
 
@@ -455,6 +455,11 @@ header .mnu_top li a {
 .gif img {
 	flex: 1 0 100%;
 	border-radius: 750px;
+}
+
+.q{
+
+
 }
 
 .moto {
@@ -482,7 +487,7 @@ header .mnu_top li a {
 												margin: 0 auto;
 											}
 											.moto {
-												
+
 											}
 											.under-face-container {
 												margin: 0 auto;
@@ -501,7 +506,7 @@ header .mnu_top li a {
 												margin: 0 auto;
 											}
 											.moto {
-												
+
 											}
 											.title-box {
 												font-size: 36px;
@@ -512,7 +517,7 @@ header .mnu_top li a {
 							.mobile-list {
 								display: none;
 							}
-						}		
+						}
 						@media (max-width: 1500px) {
 							.mobile-list {
 								display: block;
@@ -527,7 +532,6 @@ header .mnu_top li a {
 							.moto {
 								justify-content: flex-end;
 								flex: 40%;
-								
 							}
 							.gif {
 								flex: 60%;
@@ -562,6 +566,7 @@ header .mnu_top li a {
 												margin: 0 auto;
 											}
 											.moto {
+												font-size: 30px;
 											}
 											.title-box {
 												font-size: 29px;
@@ -578,6 +583,7 @@ header .mnu_top li a {
 												margin: 0 auto;
 											}
 											.moto {
+												font-size: 26px;
 											}
 											.title-box {
 												font-size: 26px;
@@ -594,6 +600,7 @@ header .mnu_top li a {
 												margin: 0 auto;
 											}
 											.moto {
+												font-size: 23px;
 											}
 											.title-box {
 												font-size: 23px;
@@ -601,7 +608,7 @@ header .mnu_top li a {
 												margin-left: 9.5%;
 												margin-bottom: 20px;
 											}
-	
+
 										}
 
 										@media (max-width: 500px) and (min-width: 414px) {
@@ -610,10 +617,9 @@ header .mnu_top li a {
 												margin: 0 auto;
 											}
 											.moto {
-												flex: 50%;
 											}
 											.title-box {
-												font-size: 18px;
+												font-size: 20px;
 												margin-top: 30px;
 												margin-left: 11%;
 												margin-bottom: 20px;
@@ -629,15 +635,13 @@ header .mnu_top li a {
 												font-size: 18px;
 											}
 											.title-box {
-												
-												font-size: 20px;
 												margin-top: 30px;
 												margin-left: 13%;
 												margin-bottom: 30px;
 											}
 										}
 
-										@media (max-width: 350px) and (min-width: 0px){
+										@media (max-width: 350px) {
 											.face-main  {
 												width: 90%;
 												margin: 0 auto;
@@ -658,32 +662,20 @@ header .mnu_top li a {
     margin-bottom: auto;
 }
 
-.desk-ai {
+.gif img {
 	width: 100%;
 	height: auto;
+
 }
 
-.mobile-ai {
+.gif-mobile {
 	display: none;
 }
 
-			@media (max-width: 480px) and (min-width: 0px){
-				.desk-ai{
-					display: none;
-				}
-				.gif {
-					flex: 40%;
-				}
-				.mobile-ai {
-					display: block;
-					width: 60%;
-					margin: 0 auto;
-				}
 
-			}
-
-
-
+.under-face-btn {
+	left: 0;
+}
 
 .list-container {
 	display: flex;
@@ -803,7 +795,7 @@ margin-bottom: 47px;
 }
 
 								@media  all and (max-width: 992px){
-									
+
 									.button-1 {
 										width: 300px;
 										height: 60px;
@@ -851,15 +843,15 @@ footer {
 	background-color: #E6E6F6;
 	font-size: 20px;
 	font-family: "bold";
-	position: fixed; 
-	bottom: 0; 
-	left: 0; 
+	position: fixed;
+	bottom: 0;
+	left: 0;
 	right: 0;
 }
-	
-	
+
+
 						@media all and (max-width: 1280px){
-								
+
 							footer {
 								height: 50px;
 								width: 100%;
@@ -871,9 +863,9 @@ footer {
 								font-size: 14px;
 								font-family: "bold";
 								bottom: 0px;
-								position: fixed; 
-								bottom: 0; 
-								left: 0; 
+								position: fixed;
+								bottom: 0;
+								left: 0;
 								right: 0;
 							}
 						}
@@ -881,7 +873,6 @@ footer {
 .block {
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
-
 }
 
 														@media (min-width: 2300px) {
@@ -1029,7 +1020,7 @@ footer {
 .col1 {
 	display: flex;
 	flex-direction: column;
-    
+
 }
 
 .number1 {
@@ -1037,7 +1028,7 @@ footer {
 	padding-right: 15px;
 	flex: 1;
 	min-width: 50px;
-	
+
 }
 
 .number1 img {
@@ -1206,7 +1197,7 @@ footer {
 									.title-text1 {
 										font-size: 40px;
 										padding-bottom: 0px;
-										
+
 									}
 									.text1-fake {
 										padding-left: 6%;
@@ -1250,7 +1241,7 @@ footer {
 										height: 25px;
 										width: auto;
 									}
-								
+
 								}
 								@media all and (max-width: 730px) and (min-width: 600px) {
 									.text1-fake {
@@ -1362,10 +1353,8 @@ footer {
 
 							@media all and (max-width: 992px) and (min-width: 600px){
 								.parsable-container {
-									width: 90%;
-									margin: auto;
 									margin-top: -100px;
-									margin-bottom: -150px;
+									margin-bottom: -60px;
 								}
 								.parsable-container p {
 									top: 90px;
@@ -1377,39 +1366,34 @@ footer {
 							}
 							@media all and (max-width: 600px) and (min-width: 400px){
 								.parsable-container {
-									width: 90%;
-									margin: auto;
 									margin-top: -100px;
 									margin-bottom: -250px;
-									
 								}
 								.parsable-container p {
 									top: 70px;
 									font-size: 20px;
 								}
 								.parsable-container img {
-									width: 220px;
+									width: 270px;
 								}
 							}
 
 							@media all and (max-width: 400px) and (min-width: 0px){
 								.parsable-container {
-									width: 90%;
-									margin: auto;
 									margin-top: -100px;
-									margin-bottom: -300px;
-									
+									margin-bottom: -100px;
 								}
 								.parsable-container p {
-									top: 50px;
-									font-size: 16px;
+									top: 90px;
+									font-size: 24px;
 								}
 								.parsable-container img {
-									width: 200px;
+									width: 270px;
 								}
 							}
 
 .clients-container {
+	background-color: darkcyan;
 	margin: 0 auto;
 	padding-top: 0px;
 	padding-bottom: 0px;
@@ -1418,36 +1402,29 @@ footer {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+
 }
 
 .map-container {
 	max-width: 100%;
 	width: 100%;
-	margin: 0 auto;
-	margin-bottom: 70px;
-	
-	border-radius: 30px;
-}
-
-.map-container img 	{
-	border-radius: 30px;
-	margin: 0 auto;
 }
 
 .tableauPlaceholder {
 	border-radius: 40px;
 	min-width: 100%;
 	max-height: 100%;
-	
+
 }
 
 							@media all and (min-width: 1700px){
 								.tableauPlaceholder {
 									width: 100%;
+									height: 100%;
 								}
 								.map-container {
 									width: 100%;
-									height: auto;
+									height: 900px;
 								}
 
 							}
@@ -1455,7 +1432,7 @@ footer {
 							@media all and (max-width: 1700px) and (min-width: 1450px){
 								.tableauPlaceholder {
 									width: 100%;
-									height: auto;
+									height: 100%;
 								}
 								.map-container {
 									width: 100%;
@@ -1471,12 +1448,11 @@ footer {
 								}
 								.map-container {
 									width: 100%;
-									height: auto;
-									margin: 0 auto;
+									height: 700px;
 								}
 							}
 
-							
+
 							@media all and (max-width: 1200px) and (min-width: 992px) {
 								.tableauPlaceholder {
 									width: 100%;
@@ -1503,7 +1479,7 @@ footer {
 								}
 							}
 
-							
+
 							@media all and (max-width: 600px) and (min-width: 500px) {
 								.tableauPlaceholder {
 									width: 100%;
@@ -1557,7 +1533,6 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: rebeccapurple;
 }
 
 .slider-mobile {
@@ -1763,7 +1738,7 @@ footer {
 									.pictures-container img {
 										height: 250px;
 									}
-								
+
 								}
 
 								@media all and (max-width: 600px) and (min-width: 465px){
@@ -1792,9 +1767,6 @@ footer {
 										line-height: 30px;
 										margin-top: 0px;
 										margin-bottom: 50px;
-									}
-									.pictures-container img {
-										height: 170px;
 									}
 								}
 
@@ -1904,7 +1876,7 @@ footer {
 							.main-last {
 								width: 90%;
 								margin: 0 auto;
-								font-size: 23px;
+								font-size: 26px;
 							}
 							.logo-main-2 img {
 								width: 350px;
@@ -1926,7 +1898,6 @@ footer {
 							.main-last {
 								width: 90%;
 								margin: 0 auto;
-								font-size: 20px;
 							}
 							.logo-main-2 img {
 								width: 260px;
@@ -1934,53 +1905,11 @@ footer {
 						}
 
 						@media (max-width: 465px) {
-							.main-last {
-								width: 90%;
-								margin: 0 auto;
-								font-size: 20px;
-							}
 							.logo-main-2 img {
-								width: 200px;
+								width: 220px;
 							}
-
 						}
 
 
-						
-						@media  all and (max-width: 992px){
-	
-							.button-1 {
-								width: 300px;
-								height: 60px;
-								position: relative;
-								border: 4px solid transparent;
-								border-radius: 12px;
-								background: #03002A;
-								background-clip: padding-box;
-								color: #E6E6F6;
-								font-family: "semibold";
-								font-size: 20px;
-								margin-top: 40px;
-							}
-						
-							.button-1::after {
-								position: absolute;
-								top: -4px; bottom: -4px;
-								left: -4px; right: -4px;
-								background: linear-gradient(#08F7C5, #00CA73);
-								content: '';
-								z-index: -1;
-								border-radius: 12px;
-							}
-						
-							.button-1:hover {
-								background: #E6E6F6;
-								background-clip: padding-box;
-								color: #03002A;
-							}
-						
-							.button-1:hover:after {
-								background: linear-gradient(#08F7C5, #00CA73);
-							}
-						
-						}
+
+
