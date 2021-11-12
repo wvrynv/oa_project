@@ -2,7 +2,6 @@ from django.conf.urls import url
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import message, send_mail
-import win32com.client as win32  
 
 # Create your views here.
 
