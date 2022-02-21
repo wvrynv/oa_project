@@ -1,0 +1,50 @@
+body {
+    background-color: #03002A;
+}
+
+@media all and (min-width: 2300px) {
+    .imprint-text {
+        width: 1400px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+@media all and (max-width: 2300px) and (min-width:  1280px) {
+    .imprint-text {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+@media all and (max-width: 1280px) and (min-width: 0px) {
+    .imprint-text {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+
+@font-face {
+    font-family: "regular";
+    src: url(fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "bold";
+    src: url(fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+
+.imprint-text {
+    color: #E6E6F6;
+    font-family: "regular";
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.bold-text {
+    font-family: "bold";
+    font-size: 18px;
+}

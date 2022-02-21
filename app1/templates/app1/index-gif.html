@@ -1,0 +1,468 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Oliva Advisory</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/style_grid_fixing_scale.css' %}">
+</head>
+<body>
+	<header class=header>
+		<div class="centered-logo-menu">
+			<div class="left-header">
+				<a href="/" class="logo">
+					<img src="{%static "images/logo__full_darkmode.png" %}" alt="">
+				</a>
+			</div>
+			<div class="right-header">
+				<ul class="mnu_top" id="buttons">
+					<li class="active-menu"><a href="#">Home</a></li>
+					<li><a href="{% url 'team' %}">Team</a></li>
+					<li><a href="{% url 'projects' %}">Projects</a></li>
+					<li><a href="{% url 'career' %}">Career</a></li>
+					<li class="two-words-menu"><a href="{% url 'contact_us' %}">Contact us</a></li>
+				</ul>
+			</div>
+
+			<div>
+				<video src="{%static "images/media1.mp4" %}" controls>
+				</video>
+			</div>
+
+            <div class="hamburger" role="navigation">
+                <div id="menuToggle">
+                    <!--
+                    A fake / hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menu">
+                    <a href="{% url 'index' %}"><li>Home</li></a>
+                    <a href="{% url 'team' %}"><li>Team</li></a>
+                    <a href="{% url 'projects' %}"><li>Projects</li></a>
+					<a href="{% url 'career' %}"><li>Career</li></a>
+                    <a href="{% url 'contact_us' %}"><li>Contact us</li></a>
+                    </ul>
+                </div>
+            </div>
+		</div>
+		<div class="lang-general">
+			<button class="lang-1">EN</button>
+			<button class="lang-2">DE</button>
+		</div>
+	</header>
+	<div class="test">
+
+	</div>
+	<div class="face-main">
+		<div class="moto">
+			<div class="title-box">
+				<h1>Bring analytics <br> to your business</h1>
+			</div>
+			<div class="desktop-list">
+				<div class="list-container">
+					<div class="list">
+						<div class="div_for_arrow">
+							<img class="arrow" src="{%static "images/arrow.png" %}">
+						</div>
+						<div class="div_for_paragraph">
+							<p>Data Analytics & Business Intelligence</p>
+						</div>
+					</div>
+					<div class="list">
+						<div class="div_for_arrow">
+							<img class="arrow" src="{%static "images/arrow.png" %}">
+						</div>
+						<div class="div_for_paragraph">
+							<p>Artificial Intelligence and Machine Learning</p>
+						</div>
+					</div>
+					<div class="list">
+						<div class="div_for_arrow">
+							<img class="arrow" src="{%static "images/arrow.png" %}">
+						</div>
+						<div class="div_for_paragraph">
+							<p>IT Recruiting, Freelancing & Hiring</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="gif">
+			<img class="desk-ai" src="{%static "images/AI2-unscreen.gif" %}">
+			<img class="mobile-ai" src="{%static "images/AI2-unscreen_croped.gif" %}">
+		</div>
+		<div class="mobile-list">
+			<div class="list-container">
+				<div class="list">
+					<img class="arrow" src="{%static "images/arrow.png" %}">
+					<p>Data Analytics & Business Intelligence</p>
+				</div>
+				<div class="list">
+					<img class="arrow" src="{%static "images/arrow.png" %}">
+					<p>Artificial Intelligence and Machine Learning</p>
+				</div>
+				<div class="list">
+					<img class="arrow" src="{%static "images/arrow.png" %}">
+					<p>IT Recruiting, Freelancing & Hiring</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="under-face-container">
+		<a href="{% url 'contact_us' %}">
+			<button class="button-1">Contact us</button>
+		</a>
+	</div>
+
+	<div class="block">
+		<div class="title-container-1">
+			<h2>Our expertise</h2>
+		</div>
+		<div class="columns-1">
+			<div class="col1">
+				<div class="title1">
+					<div class="number1">
+						<img src="{%static 'images/num1.png' %}">
+					</div>
+					<div class="title-text1">
+						Data Analytics & Business Intelligence
+					</div>
+				</div>
+			</div>
+			<div class="col2">
+				<div class="title1">
+					<div class="number1">
+						<img src="{%static 'images/num2.png' %}">
+					</div>
+					<div class="title-text1">
+						Artificial Intelligence & Machine Learning
+					</div>
+				</div>
+			</div>
+			<div class="col3">
+				<div class="title1">
+					<div class="number1">
+						<img src="{%static 'images/num3.png' %}">
+					</div>
+					<div class="title-text1">
+						IT Recruiting, Freelancing & Hiring
+					</div>
+				</div>
+			</div>
+			<div class="row1">
+				<div class="text1-fake">
+					<div class="margin-left">
+					</div>
+					<div class="text1">
+						We support you in setting up, developing, managing and maintaining your data analytics system. Several implemented projects with Tableau and PowerBI.
+					</div>
+				</div>
+			</div>
+			<div class="row2">
+				<div class="text1-fake">
+					<div class="margin-left">
+					</div>
+					<div class="text1">
+						We use machine learning tools and algorithms to help companies develop AI-driven products and solutions. Designing, implementing, and integrating artificial intelligence solutions.
+					</div>
+				</div>
+			</div>
+			<div class="row3">
+				<div class="text1-fake">
+					<div class="margin-left">
+					</div>
+					<div class="text1">
+						We recruit and staff IT Consultants | Developers | Scrum Masters | Business Analysts & Project Managers (full-time employees or on a freelance basis).
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="parsable-container">
+		<p>We proudly are a trusted partner of:</p>
+		<div>
+			<img src="{%static 'images/parsable.png' %}">
+		</div>
+	</div>
+	<div class="block">
+		<div class="title-container-1">
+			<h2>Our clients</h2>
+		</div>
+		<div class="clients-container">
+			<div class="map-container">
+				<!-- <img src="{%static 'images/map.png' %}">
+				-->
+				<div class='tableauPlaceholder' id='viz1637159845409' style='position: relative'><noscript><a href='#'><img alt='Customer map ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;BB&#47;BBSPJ2RC2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;BBSPJ2RC2' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;BB&#47;BBSPJ2RC2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='de-DE' /></object></div> <script type='text/javascript'> var divElement = document.getElementById('viz1637159845409'); var vizElement = divElement.getElementsByTagName('object')[0]; if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';} var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement); </script>
+			</div>
+		</div>
+	</div>
+	<div class="block">
+		<div class="title-container-1">
+			<h2>What we can do<br>for your business</h2>
+		</div>
+		<div class="rows">
+			<div class="nums">
+				<img src="{%static 'images/num1.png' %}">
+			</div>
+			<div class="text-do">
+				<p class="titles">Tableau </p>
+				<p class="regular-text">
+					In Tableau we display data in a graphical user interface via drag and drop. Individual data analyses can be compiled in dashboards and linked with each other.
+				</p>
+			</div>
+			<div class="pictures-container">
+				<img src="{%static 'images/Tableau.png' %}">
+			</div>
+		</div>
+		<div class="rows">
+			<div class="nums">
+				<img src="{%static 'images/num2.png' %}">
+			</div>
+			<div class="text-do">
+				<p class="titles">Power BI</p>
+				<p class="regular-text">
+					Power BI transforms your company’s data into visual representations. We collect and structure your data and focus your attention on what is most important to you.
+				</p>
+			</div>
+			<div class="pictures-container">
+				<img src="{%static 'images/PowerBI.png' %}">
+			</div>
+		</div>
+		<div class="rows">
+			<div class="nums">
+				<img src="{%static 'images/num3.png' %}">
+			</div>
+			<div class="text-do">
+				<p class="titles">Mobile friendly</p>
+				<p class="regular-text">
+					Our reports can be displayed in mobile applications, bringing analytics to your business at any given time.
+				</p>
+			</div>
+			<div class="pictures-container phone-picture">
+				<img src="{%static 'images/Mobile.png' %}">
+			</div>
+		</div>
+
+	</div>
+	<div class="main-last">
+		<div class="logo-main-2">
+			<img src="{%static 'images/logo__full_darkmode.png' %}">
+		</div>
+		<div class="about-contact">
+			<div class="short-about">
+				<p>
+					We are a young dynamic team, that tries to be ahead of the curve in data science as well as designs. We thrive to deliver high quality products that grant our clients the most valuable insights.
+				</p>
+			</div>
+			<div class="button-contact-last">
+				<a href="{% url 'contact_us' %}">
+					<button class="button-1">Contact us</button>
+				</a>
+			</div>
+		</div>
+	</div>
+	<footer class="mobile">
+		<div>
+			<a href="{% url 'imprint' %}"  target="_blank">Imprint</a>
+		</div>
+		<div>
+			<a href="{% url 'imprint' %}"  target="_blank">© Oliva Advisory GmbH 2019</a>
+		</div>
+	</footer>
+
+
+	<div class="cookies" id="js-cookies_visibility">
+		<span class="cookies-text">
+			We use cookies on our website to understand how you use it. By clicking "Accept", you consent to their use. <a href="{% url 'privacy_policy' %}"  target="_blank">Privacy policy</a>
+		</span>
+		<div class="buttons-cookies">
+			<a href="#" class="js-open-modal" data-modal="1">
+				<button class="accept">Settings</button>
+			</a>
+			<a>
+				<button class="decline"  id="cookie_button">Decline all</button>
+			</a>
+			<a>
+				<button class="accept"  type="button" onclick="hide_cookies()">Accept</button>
+			</a>
+			<a>
+				<button class="cross"  type="button" onclick="hide_cookies()"></button>
+			</a>
+		</div>
+	</div>
+
+<!-- Modal window with advanced cookies settings -->
+
+
+		<div class="modal" data-modal="1">
+			<!--   Svg иконка для закрытия окна  -->
+			
+			<div class="grid-item">
+				<span class="modal__title">Advanced cookie settings</span>
+			</div>
+
+			<div class="grid-item">
+				<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+			</div>
+
+			<div class="grid-item">
+				<p><span class="title-settings">Strictly necessary cookies</span></br>
+			<span class="text-settings">These cookies are required for basic functions such as security, identity verification and network management. Therefore, they cannot be deactivated.
+			</span></p>
+			</div>
+
+			<div class="grid-item">
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+			</div>
+
+			<div class="grid-item">
+				<p><span class="title-settings">Cookies for marketing purposes</span></br>
+				<span class="text-settings">Marketing cookies are used to measure the effectiveness of advertising, understand visitors' interests and tailor advertisements to their personal needs.
+				</span></p>				
+			</div>  
+
+			<div class="grid-item">
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+			</div>
+
+			<div class="grid-item">
+				<p class="modal__title"><p><span class="title-settings">Functional cookies</span></br>
+				<span class="text-settings">Functional cookies are used to store information that has already been provided and to offer improved and personalized functions based on this.
+				</span></p>
+			</div>
+
+			<div class="grid-item">
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+			</div>
+			
+			<div class="grid-item">
+				<p class="modal__title"><p><span class="title-settings">Analytics-Cookies</span></br>
+				<span class="text-settings">Functional cookies are used to help us understand how our website is used, to detect errors and to improve the functionality of the website.
+				</span></p>
+			</div>
+
+			<div class="grid-item">
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+			</div>
+			<form class="btn-form" action="{% url 'index' %}">
+				<button type="submit_settings" class="btn btn-warning btn-lg btn-block">Confirm my choice</button>
+			</form>
+		</div>
+
+		<!-- Подложка под модальным окном -->
+		<div class="overlay js-overlay-modal"></div>
+
+</body>
+</html>
+<script>
+	
+
+
+	
+
+	function hide_cookies() {
+		var cookies_div = document.getElementById('js-cookies_visibility');
+	
+		cookies_div.style.display = 'none';
+	}
+	
+	function addEvent(target, type, handler) {
+		if (target.addEventListener) {
+			target.addEventListener(type, handler, false);
+		} else if (target.attachEvent) {
+			target.attachEvent('on' + type, function() {
+				return handler.call(target, window.event);
+			});
+		} else {
+			target['on' + type] = handler;
+		}
+	}
+	
+	/*addEvent(cookies_div, 'click', hide_cookies);*/
+
+	!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
+
+
+	document.addEventListener('DOMContentLoaded', function() {
+	
+	   /* Записываем в переменные массив элементов-кнопок и подложку.
+		  Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
+	   var modalButtons = document.querySelectorAll('.js-open-modal'),
+		   overlay      = document.querySelector('.js-overlay-modal'),
+		   closeButtons = document.querySelectorAll('.js-modal-close');
+	
+	
+	   /* Перебираем массив кнопок */
+	   modalButtons.forEach(function(item){
+	
+		  /* Назначаем каждой кнопке обработчик клика */
+		  item.addEventListener('click', function(e) {
+	
+			 /* Предотвращаем стандартное действие элемента. Так как кнопку разные
+				люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
+				Нужно подстраховаться. */
+			 e.preventDefault();
+	
+			 /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+				и будем искать модальное окно с таким же атрибутом. */
+			 var modalId = this.getAttribute('data-modal'),
+				 modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+	
+	
+			 /* После того как нашли нужное модальное окно, добавим классы
+				подложке и окну чтобы показать их. */
+			 modalElem.classList.add('active');
+			 overlay.classList.add('active');
+		  }); // end click
+	   }); // end foreach
+	
+	
+	   closeButtons.forEach(function(item){
+	
+		  item.addEventListener('click', function(e) {
+			 var parentModal = this.closest('.modal');
+	
+			 parentModal.classList.remove('active');
+			 overlay.classList.remove('active');
+		  });
+	   }); // end foreach
+	
+	
+		document.body.addEventListener('keyup', function (e) {
+			var key = e.keyCode;
+	
+			if (key == 27) {
+	
+				document.querySelector('.modal.active').classList.remove('active');
+				document.querySelector('.overlay').classList.remove('active');
+			};
+		}, false);
+	
+	
+		overlay.addEventListener('click', function() {
+			document.querySelector('.modal.active').classList.remove('active');
+			this.classList.remove('active');
+		});
+	}); // end ready
+	
+</script>

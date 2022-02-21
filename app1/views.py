@@ -1,14 +1,26 @@
+from django.conf import settings
 from django.conf.urls import url
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import message, send_mail
-import win32com.client as win32  
+from django.shortcuts import render
+import datetime
 
 # Create your views here.
 
 def index (request):
-    return render(request, 'app1/index.html', {})
+    response = render(request,'app1/index.html')
+    if not request.COOKIES.get('n_team'):
+        set_cookies(request,response)
+    return response
 
+def set_cookies (request, response):
+        max_age = 365 * 24 * 60 * 60  # 10 years
+        expires = datetime.datetime.utcnow() + datetime.timedelta(seconds=max_age)
+        response.set_cookie('n_team', request.GET.get('n_team', ''),
+                    expires=expires.utctimetuple(), max_age=max_age)
+        
+ 
 def contact_us (request):
 
     if request.method == "POST":
@@ -24,8 +36,8 @@ def contact_us (request):
         send_mail(
             "Message from web-site, from " + message_name, #subject
             text, #message
-            message_email, #from email
-            ["k.verma@oliva-advisory.de"], #to email(s)
+            "olivkaadvisory@gmail.com", #from email
+            ["m.samoilenko@oliva-advisory.de"], #to email(s)
         )
         
         return render(request, 'app1/contact_us.html', {'message_name': message_name})
@@ -44,4 +56,8 @@ def team (request):
 def change_status_career(request):
     return render(request, 'app1/team.html')
 
+def imprint(request):
+    return render(request, 'app1/imprint.html')
 
+def privacy_policy(request):
+    return render(request, 'app1/privacy_policy.html')

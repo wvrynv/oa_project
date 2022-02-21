@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Oliva Advisory</title>
-	<link rel="stylesheet" type="text/css" href="{%static 'css/career.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/career_scale_fixing.css' %}">
 </head>
 <body>
 	<header class="header">
@@ -58,12 +58,21 @@
 			<div class="title-box"><h1>Join us!<h1></div>
 			<div class="list-container">
 				<div class="list">
-					<img class="arrow" src="{%static "images/arrow.png" %}">
-					<p>We are continuously looking for talented people</p>
+					<div class="div_for_arrow">
+						<img class="arrow" src="{%static "images/arrow.png" %}">
+					</div>
+					<div class="div_for_paragraph">
+						<p>We are continuously looking for talented people</p>
+					</div>
 				</div>
 				<div class="list">
-					<img class="arrow" src="{%static "images/arrow.png" %}">
-					<p >If you are interested in career at Oliva Advisory, you can apply for our open positions and we will get in touch.</p>
+					<div class="div_for_arrow">
+						<img class="arrow" src="{%static "images/arrow.png" %}">
+					</div>
+					<div class="div_for_paragraph">
+						<p >If you are interested in career at Oliva Advisory, you can apply for our open positions and we will get in touch.</p>
+				
+					</div>
 				</div>
 			</div>
 		</div>
@@ -142,9 +151,9 @@
 	</div>
 	<div class="mid-title">
 		<div class="mid-padding">
-			<h2>Have a question?<br>
-				Check FAQ or get in touch with us!
-			</h2>
+			<p>Have a question?<br>
+			   Check FAQ or get in touch with us!
+			<p>
 		</div>
 	</div>
 
@@ -270,28 +279,28 @@
 	</div>
 
 	<div class="block">
-		<div class="title-container-career">
-			<h2>
+		<div class="title-container-career getintouch_margin">
+			<p>
 			Did not find an answer?<br>
 			Get in touch with us!
-			</h2>
+			</p>
 		</div>
 		<div class="contact-hr">
 			<div class="buttons-hr">
 				<a href="mailto:k.verma@oliva-advisory.de">
-					<button class="button-2">Via email</button>
+					<button class="button-1">Via email</button>
 				</a>
 				<a href="{% url 'contact_us' %}">
-					<button class="button-2">Via contact form</button>
+					<button class="button-1">Via contact form</button>
 				</a>
 				<a href="https://de.linkedin.com/in/ksenia-verma-134b5865" target="_blank">
-					<button class="button-2">Via LinkedIn</button>
+					<button class="button-1">Via LinkedIn</button>
 				</a>
 			</div>
 			<div class="about-hr">
 				<p><span class="name-hr">Ksenia Verma<br></span>
 				<span class="position-hr">Talent Acquisition Specialist<br></span>
-				<span class="hr-says">We support you in setting up, developing, managing and maintaining your data analytics system. Several implemented projects with Tableau and PowerBI.<br><br>
+				<span class="hr-says">We support you in setting up, developing, managing and maintaining your data analytics system. Several implemented projects with Tableau and PowerBI.<br>
 
 				We support you in setting up, developing, managing and maintaining your data analytics system.</span></p>
 				<div class="photo-hr">
@@ -311,13 +320,22 @@
 </body>
 <script>
 	function myFunction(id_p, id_btn) {
+
 		if (id_p.style.display == "none"){
 			id_p.style.display = "block";
 			id_btn.className = "minus";
+			return 1;
 		}
-		else {
+		if (id_p.style.display == "block"){
 			id_p.style.display = "none";
 			id_btn.className = "plus";
+			return 1;
+		}
+		else {
+			console.log("else")
+			id_p.style.display = "block";
+			id_btn.className = "minus";
+			return 1;
 		}
 	}
 </script>

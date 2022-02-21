@@ -6,10 +6,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Oliva Advisory</title>
-	<link rel="stylesheet" type="text/css" href="{%static "css/contact_us_2.css" %}">
+	<link rel="stylesheet" type="text/css" href="{%static "css/contact_us_scale_fixing.css" %}">
 </head>
 <body>
-	<header class=header>
+	<div class="bg-modal">
+		
+	</div>
+	<header class="header">
 		<div class="centered-logo-menu">
 			<div class="left-header">
 				<a href="/" class="logo">
@@ -58,29 +61,45 @@
 			<div class="title-box"><h1>Contact us<h1></div>
 			<div class="list-container">
 				<div class="list">
-					<img class="arrow" src="{%static "images/arrow.png" %}">
-					<p>Do you want to bring the power of analytics to your business?</p>
+					<div class="div_for_arrow">
+						<img class="arrow" src="{%static "images/arrow.png" %}">
+					</div>
+					<div class="div_for_paragraph">
+						<p>Do you want to bring the power of analytics to your business?</p>
+					</div>
 				</div>
 				<div class="list">
-					<img class="arrow" src="{%static "images/arrow.png" %}">
-					<p>Our consultants will help you optimize processes and bring valuable insights.</p>
+					<div class="div_for_arrow">
+						<img class="arrow" src="{%static "images/arrow.png" %}">
 					</div>
+					<div class="div_for_paragraph">
+						<p>Our consultants will help you optimize processes and bring valuable insights.</p>
+					</div>
+				</div>
 				<div class="list">
-					<img class="arrow" src="{%static "images/arrow.png" %}">
-					<p>We will get back to you within 24 hours.</p>
+					<div class="div_for_arrow">
+						<img class="arrow" src="{%static "images/arrow.png" %}">
+					</div>
+					<div class="div_for_paragraph">
+						<p>We will get back to you within 24 hours.</p>
+					</div>	
 				</div>
 				<div class="list empty">
 					<p></p>
 				</div>
 				<div class="list">
-					<img class="arrow arrow-invisible" src="{%static "images/arrow.png" %}">
-					<p>Our team is there for you.</p>
+					<div class="div_for_arrow">
+						<img class="arrow arrow-invisible" src="{%static "images/arrow.png" %}">
+					</div>
+					<div class="div_for_paragraph">
+						<p>Our team is there for you.</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="divvv">
+	<div class="block">
 		<div class="forms-container">
 			<form class="forms-all" action="{% url 'contact_us' %}" method="post">
 				{% csrf_token %}
@@ -114,9 +133,10 @@
 			</form>
 		</div>
 	</div>
+
 	<footer>
 		<div>
-			<p>Imprint</p>
+			<a href="{% url 'imprint' %}"  target="_blank">Imprint</a>
 		</div>
 		<div>
 			<p>© Oliva Advisory GmbH 2019</p>

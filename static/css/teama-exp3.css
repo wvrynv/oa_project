@@ -194,7 +194,7 @@ header .mnu_top li a {
 
 .active-menu li a {
 	text-decoration: none;
-	color: green;
+	color: #00CA73;
 	font-family: "semibold";
 }
 
