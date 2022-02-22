@@ -13,7 +13,7 @@
 		<div class="centered-logo-menu">
 			<div class="left-header">
 				<a href="/" class="logo">
-					<img src="{%static "images/logo__full_darkmode.png" %}" alt="">
+					<img src="{% static 'images/logo__full_darkmode.png' %}" alt="">
 				</a>
 			</div>
 			<div class="right-header">
@@ -64,7 +64,7 @@
 				<div class="list-container">
 					<div class="list">
 						<div class="div_for_arrow">
-							<img class="arrow" src="{%static "images/arrow.png" %}">
+							<img class="arrow" src="{% static 'images/arrow.png' %}">
 						</div>
 						<div class="div_for_paragraph">
 							<p>Data Analytics & Business Intelligence</p>
@@ -72,7 +72,7 @@
 					</div>
 					<div class="list">
 						<div class="div_for_arrow">
-							<img class="arrow" src="{%static "images/arrow.png" %}">
+							<img class="arrow" src="{% static 'images/arrow.png' %}">
 						</div>
 						<div class="div_for_paragraph">
 							<p>Artificial Intelligence and Machine Learning</p>
@@ -80,7 +80,7 @@
 					</div>
 					<div class="list">
 						<div class="div_for_arrow">
-							<img class="arrow" src="{%static "images/arrow.png" %}">
+							<img class="arrow" src="{%static 'images/arrow.png' %}">
 						</div>
 						<div class="div_for_paragraph">
 							<p>IT Recruiting, Freelancing & Hiring</p>
@@ -90,21 +90,21 @@
 			</div>
 		</div>
 		<div class="gif">
-			<img class="desk-ai" src="{%static "images/AI2-unscreen.gif" %}">
-			<img class="mobile-ai" src="{%static "images/AI2-unscreen_croped.gif" %}">
+			<img class="desk-ai" src="{% static 'images/AI2-unscreen.gif' %}">
+			<img class="mobile-ai" src="{% static 'images/AI2-unscreen_croped.gif' %}">
 		</div>
 		<div class="mobile-list">
 			<div class="list-container">
 				<div class="list">
-					<img class="arrow" src="{%static "images/arrow.png" %}">
+					<img class="arrow" src="{% static 'images/arrow.png' %}">
 					<p>Data Analytics & Business Intelligence</p>
 				</div>
 				<div class="list">
-					<img class="arrow" src="{%static "images/arrow.png" %}">
+					<img class="arrow" src="{% static 'images/arrow.png' %}">
 					<p>Artificial Intelligence and Machine Learning</p>
 				</div>
 				<div class="list">
-					<img class="arrow" src="{%static "images/arrow.png" %}">
+					<img class="arrow" src="{% static 'images/arrow.png' %}">
 					<p>IT Recruiting, Freelancing & Hiring</p>
 				</div>
 			</div>
@@ -125,7 +125,7 @@
 			<div class="col1">
 				<div class="title1">
 					<div class="number1">
-						<img src="{%static 'images/num1.png' %}">
+						<img src="{% static 'images/num1.png' %}">
 					</div>
 					<div class="title-text1">
 						Data Analytics & Business Intelligence
@@ -273,191 +273,10 @@
 		</div>
 	</footer>
 
+	{% if not cookie %}
+		{% include "app1/cookie_modal.html" %}
+	{% endif %}
 
-	<div class="cookies" id="js-cookies_visibility">
-		<span class="cookies-text">
-			We use cookies on our website to understand how you use it. By clicking "Accept", you consent to their use. <a href="{% url 'privacy_policy' %}"  target="_blank">Privacy policy</a>
-		</span>
-		<div class="buttons-cookies">
-			<a href="#" class="js-open-modal" data-modal="1">
-				<button class="accept">Settings</button>
-			</a>
-			<a>
-				<button class="decline"  id="cookie_button">Decline all</button>
-			</a>
-			<a>
-				<button class="accept"  type="button" onclick="hide_cookies()">Accept</button>
-			</a>
-			<a>
-				<button class="cross"  type="button" onclick="hide_cookies()"></button>
-			</a>
-		</div>
-	</div>
-
-<!-- Modal window with advanced cookies settings -->
-
-
-		<div class="modal" data-modal="1">
-			<!--   Svg иконка для закрытия окна  -->
-			
-			<div class="grid-item">
-				<span class="modal__title">Advanced cookie settings</span>
-			</div>
-
-			<div class="grid-item">
-				<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-			</div>
-
-			<div class="grid-item">
-				<p><span class="title-settings">Strictly necessary cookies</span></br>
-			<span class="text-settings">These cookies are required for basic functions such as security, identity verification and network management. Therefore, they cannot be deactivated.
-			</span></p>
-			</div>
-
-			<div class="grid-item">
-				<label class="switch">
-					<input type="checkbox">
-					<span class="slider round"></span>
-				</label>
-			</div>
-
-			<div class="grid-item">
-				<p><span class="title-settings">Cookies for marketing purposes</span></br>
-				<span class="text-settings">Marketing cookies are used to measure the effectiveness of advertising, understand visitors' interests and tailor advertisements to their personal needs.
-				</span></p>				
-			</div>  
-
-			<div class="grid-item">
-				<label class="switch">
-					<input type="checkbox">
-					<span class="slider round"></span>
-				</label>
-			</div>
-
-			<div class="grid-item">
-				<p class="modal__title"><p><span class="title-settings">Functional cookies</span></br>
-				<span class="text-settings">Functional cookies are used to store information that has already been provided and to offer improved and personalized functions based on this.
-				</span></p>
-			</div>
-
-			<div class="grid-item">
-				<label class="switch">
-					<input type="checkbox">
-					<span class="slider round"></span>
-				</label>
-			</div>
-			
-			<div class="grid-item">
-				<p class="modal__title"><p><span class="title-settings">Analytics-Cookies</span></br>
-				<span class="text-settings">Functional cookies are used to help us understand how our website is used, to detect errors and to improve the functionality of the website.
-				</span></p>
-			</div>
-
-			<div class="grid-item">
-				<label class="switch">
-					<input type="checkbox">
-					<span class="slider round"></span>
-				</label>
-			</div>
-			<form class="btn-form" action="{% url 'index' %}">
-				<button type="submit_settings" class="btn btn-warning btn-lg btn-block">Confirm my choice</button>
-			</form>
-		</div>
-
-		<!-- Подложка под модальным окном -->
-		<div class="overlay js-overlay-modal"></div>
 
 </body>
 </html>
-<script>
-	
-
-
-	
-
-	function hide_cookies() {
-		var cookies_div = document.getElementById('js-cookies_visibility');
-	
-		cookies_div.style.display = 'none';
-	}
-	
-	function addEvent(target, type, handler) {
-		if (target.addEventListener) {
-			target.addEventListener(type, handler, false);
-		} else if (target.attachEvent) {
-			target.attachEvent('on' + type, function() {
-				return handler.call(target, window.event);
-			});
-		} else {
-			target['on' + type] = handler;
-		}
-	}
-	
-	/*addEvent(cookies_div, 'click', hide_cookies);*/
-
-	!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
-
-
-	document.addEventListener('DOMContentLoaded', function() {
-	
-	   /* Записываем в переменные массив элементов-кнопок и подложку.
-		  Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
-	   var modalButtons = document.querySelectorAll('.js-open-modal'),
-		   overlay      = document.querySelector('.js-overlay-modal'),
-		   closeButtons = document.querySelectorAll('.js-modal-close');
-	
-	
-	   /* Перебираем массив кнопок */
-	   modalButtons.forEach(function(item){
-	
-		  /* Назначаем каждой кнопке обработчик клика */
-		  item.addEventListener('click', function(e) {
-	
-			 /* Предотвращаем стандартное действие элемента. Так как кнопку разные
-				люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
-				Нужно подстраховаться. */
-			 e.preventDefault();
-	
-			 /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
-				и будем искать модальное окно с таким же атрибутом. */
-			 var modalId = this.getAttribute('data-modal'),
-				 modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
-	
-	
-			 /* После того как нашли нужное модальное окно, добавим классы
-				подложке и окну чтобы показать их. */
-			 modalElem.classList.add('active');
-			 overlay.classList.add('active');
-		  }); // end click
-	   }); // end foreach
-	
-	
-	   closeButtons.forEach(function(item){
-	
-		  item.addEventListener('click', function(e) {
-			 var parentModal = this.closest('.modal');
-	
-			 parentModal.classList.remove('active');
-			 overlay.classList.remove('active');
-		  });
-	   }); // end foreach
-	
-	
-		document.body.addEventListener('keyup', function (e) {
-			var key = e.keyCode;
-	
-			if (key == 27) {
-	
-				document.querySelector('.modal.active').classList.remove('active');
-				document.querySelector('.overlay').classList.remove('active');
-			};
-		}, false);
-	
-	
-		overlay.addEventListener('click', function() {
-			document.querySelector('.modal.active').classList.remove('active');
-			this.classList.remove('active');
-		});
-	}); // end ready
-	
-</script>
