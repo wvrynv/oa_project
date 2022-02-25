@@ -1,3 +1,4 @@
+from curses.ascii import HT
 from django.conf import settings
 from django.conf.urls import url
 from django.shortcuts import render
@@ -6,8 +7,6 @@ from django.core.mail import message, send_mail
 from django.shortcuts import render
 import datetime
 from django.utils import translation
-
-
 # Create your views here.
 
 def index(request):
@@ -24,7 +23,7 @@ def index(request):
 def set_cookies(request, response):
     current_lang = translation.get_language()
 
-    max_age = 7 * 24 * 60 * 60  # one week 
+    max_age = 1  # one week 
     expires = datetime.datetime.utcnow() + datetime.timedelta(seconds=max_age)
     response.set_cookie('lang', request.GET.get("lang", current_lang),
                 expires=expires.utctimetuple(), max_age=max_age)
@@ -35,6 +34,7 @@ def delete_cookiee(request):
     delete_cookies(request, response)
     return response
 
+# cookie func
 def delete_cookies(request, response):
     response.set_cookie(request.GET.get("lang",''), expires=0, max_age=0)
 
@@ -42,20 +42,19 @@ def delete_cookies(request, response):
 def contact_us (request):
     
     if request.method == "POST":
-
         message_name = request.POST.get('message_name')
         message_phone = request.POST.get('message_phone')
         message_email = request.POST.get('message_email')
         message = request.POST.get('message')
 
-
+        
         text = "Name: {} \nPhone: {} \nEmail: {} \nMessage: {}".format(message_name, message_phone, message_email, message)
 
         send_mail(
             "Message from web-site, from " + message_name, #subject
             text, #message
-            "olivkaadvisory@gmail.com", #from email
-            ["m.samoilenko@oliva-advisory.de"], #to email(s)
+            settings.EMAIL_HOST_USER, #from email
+            (message_email,) #to email(s)
         )
         
         return render(request, 'app1/contact_us.html', {'message_name': message_name})

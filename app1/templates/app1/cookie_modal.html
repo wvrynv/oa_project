@@ -101,14 +101,20 @@
 
         <script>
 
+			function hide_cookies() {
+				var cookies_div = document.getElementById('js-cookies_visibility');
+				cookies_div.style.visibility= 'hidden';
+				setTimeout(function() {
+					cookies_div.style.visibility= 'visible';
+				}, 86400);
+			}
 
+            // function hide_cookies() {
+            //     var cookies_div = document.getElementById('js-cookies_visibility');
+            //     cookies_div.style.display = 'none';
 
-
-
-            function hide_cookies() {
-                var cookies_div = document.getElementById('js-cookies_visibility');
-                cookies_div.style.display = 'none';
-            }
+				
+            // }
         
             function addEvent(target, type, handler) {
                 if (target.addEventListener) {
@@ -190,3 +196,17 @@
             }); // end ready
         
         </script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<!-- <script>
+			function runScript() {
+			$.ajax({
+				url: 'http://127.0.0.1:8000/cross_timeout/', //The URL you defined in urls.py
+				success: function(data) {
+				//If you wish you can do additional data manipulation here.
+				console.log(data);
+				}
+
+			});
+		}
+		</script> -->

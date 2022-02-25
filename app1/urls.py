@@ -15,5 +15,5 @@ urlpatterns = [
     path('projects/', views.projects, name='projects'),
     path('imprint/', views.imprint, name='imprint'),
     path('privacy_policy/', views.privacy_policy, name='privacy_policy'),
-    path("", views.delete_cookiee, name="delete_cookiee")
+    path("", views.delete_cookiee, name="delete_cookiee"),
 ]

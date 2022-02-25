@@ -850,7 +850,6 @@ input[type="text"] {
 		padding-left: 0%;
 		display: flex;
 		justify-content: flex-end;
-		margin-bottom: 170px;
 	}
 
 	.textarea {
