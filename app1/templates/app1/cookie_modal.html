@@ -10,14 +10,14 @@
 			<a href="#" class="js-open-modal" data-modal="1">
 				<button class="accept">Settings</button>
 			</a>
-			<a href="{% url 'delete_cookiee' %}">
-				<button >Decline all</button>
+			<a href="{% url 'delete' %}">
+				<button>Decline all</button>
 			</a>
 			<a href="{% url 'index' %}">
 				<button class="accept"  type="button" >Accept</button>
 			</a>
-			<a>
-				<button class="cross"  type="button" onclick="hide_cookies()"></button>
+			<a href="{% url 'delete' %}">
+				<button class="cross"  type="button"></button>
 			</a>
 		</div>
 	</div>
@@ -105,7 +105,7 @@
 				var cookies_div = document.getElementById('js-cookies_visibility');
 				cookies_div.style.visibility= 'hidden';
 				setTimeout(function() {
-					cookies_div.style.visibility= 'visible';
+					cookies_div.style.visibility = 'visible';
 				}, 86400);
 			}
 
@@ -210,3 +210,4 @@
 			});
 		}
 		</script> -->
+
