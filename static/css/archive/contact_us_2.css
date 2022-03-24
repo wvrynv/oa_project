@@ -991,7 +991,6 @@ input[type="text"] {
 		padding-bottom: 93px;
 		display: flex;
 		justify-content: flex-end;
-		margin-bottom: 170px;
 	}
 
 							@media all and (max-width: 1280px) and (min-width: 920px) {
