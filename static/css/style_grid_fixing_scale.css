@@ -406,8 +406,6 @@ header .active-menu a {
 .face-main {
 	margin: 0 auto;
 	max-width: 1800px;
-	display: grid;
-    grid-template-columns: 60% 40%;
 	color: #E6E6F6;
     padding-top: 5%;
 }
@@ -440,15 +438,15 @@ header .active-menu a {
 	justify-content: center;
 }
 
-
-
-
 .video_div {
 	width: 100%;
 }
 
-
-
+				@media (max-width: 1280px) {
+					.video_div {
+						height: 100px;
+					}
+				}
 
 .under-face-container {
     margin: 0 auto;
@@ -473,7 +471,11 @@ header .active-menu a {
 											.title-box {
 												font-size: 34px;
 											}
+											.video_div {
+												margin-bottom: 20px;
+											}
 										}
+										
 
 										@media (max-width: 1860px) {
 											.title-box {
@@ -486,6 +488,9 @@ header .active-menu a {
 												margin: 0 auto;
 												max-width: 90%;
 												width: 90%;
+											}
+											.video_div {
+												margin-bottom: 20px;
 											}
 										}
 
@@ -503,34 +508,12 @@ header .active-menu a {
 											.title-box {
 												font-size: 34px;
 											}
-
+											.video_div {
+												margin-bottom: 20px;
+											}
 
 										}
-						@media (min-width: 1280px) {
-							.mobile-list {
-								display: none;
-							}
-						}		
-						@media (max-width: 1280px) {
-							.mobile-list {
-								display: block;
-							}
-							.desktop-list {
-								display: none;
-							}
-							.face-main {
-								display: grid;
-								grid-template-columns: 60% 40%;
-							}
-							.moto {
-								justify-content: center;
-								flex: 40%;
-								
-							}
-							.mobile-list {
-								grid-column: 1 / span 2;
-							}
-						}
+
 
 										@media all and (max-width: 1280px) and (min-width: 992px) {
 											.face-main  {
@@ -555,10 +538,6 @@ header .active-menu a {
 											.face-main  {
 												width: 90%;
 												margin: 0 auto;
-												grid-template-columns: 65% 35%;
-											}
-											.moto {
-												flex: 70%;
 											}
 											.title-box {
 												font-size: 28px;
@@ -577,8 +556,7 @@ header .active-menu a {
 												width: 90%;
 												margin: 0 auto;
 											}
-											.moto {
-											}
+
 											.title-box {
 												font-size: 26px;
 												margin-top: 30px;
@@ -592,8 +570,7 @@ header .active-menu a {
 												width: 90%;
 												margin: 0 auto;
 											}
-											.moto {
-											}
+
 											.title-box {
 												font-size: 23px;
 												margin-top: 30px;
@@ -975,9 +952,14 @@ footer {
 	font-size: 100px;
 }
 
+
+
 .text1-fake {
 	height: 99%;
 }
+
+
+/* Do we need this ctyles? .text1 */
 
 .text1 {
 	padding-left: 30px;
@@ -1037,7 +1019,10 @@ footer {
 				}
 			}
 
-
+.hidden_image {
+	display: block;
+	visibility: hidden;
+}
 
 			@media all and (min-width: 1280px) {
 				.columns-1 {
@@ -1060,32 +1045,77 @@ footer {
 				
 			}
 
+.text_uder_video {
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 31px;
+	font-size: 16px;
+	font-family: regular;
+	color: #E6E6F6;
+	height: 100%;
+	background: #03002A;
+	height: 100%;
+	line-height: px;
+}
+			
 
 
-
-					@media all and (max-width: 1280px) {
+					@media all and (max-width: 1280px) and (min-width: 676px){
 						.columns-1 {
-							display: flex;
-							flex-direction: column;
+							padding-top: 100px;
+							display: grid;
+							row-gap: 10px;
+							gap: 10px;
+							grid-template-columns: 40% 60%;
+							justify-content: space-between;
 						}
-						.col1 {
+						.item {
+							grid-row: span 2;
+						}
+						.item1 {
 							order: 1;
 						}
-						.row1 {
+						.item2 {
 							order: 2;
 						}
-						.col2 {
+						.item3 {
 							order: 3;
 						}
-						.row2 {
+						.item4 {
 							order: 4;
 						}
-						.col3 {
+						.item5 {
 							order: 5;
 						}
-						.row3 {
+						.item6 {
 							order: 6;
 						}
+						.item7 {
+							order: 7;
+						}
+						.item8 {
+							order: 8;
+						}
+						.item9 {
+							order: 9;
+						}
+						.number1 {
+							display: none;
+						}
+
+						.video_div {
+							position: relative;
+							padding: 0px 0px 40% 0px;
+
+						}
+						.video_div video{
+							position: absolute;
+							object-fit: cover;
+							width: 100%;
+							height: 100%;
+						}
+
 						.title-text1 {
 							flex: 20;
 						}
@@ -1094,13 +1124,72 @@ footer {
 						}
 					}
 
+					@media all and (max-width: 676px) {
+						.columns-1 {
+							padding-top: 100px;
+							display: grid;
+							row-gap: 10px;
+							gap: 10px;
+							grid-template-columns: 40% 60%;
+							justify-content: space-between;
+						}
+						.item {
+							grid-column: span 2;
+							grid-row: span 2;
+						}
+						.item1 {
+							order: 1;
+						}
+						.item2 {
+							order: 2;
+						}
+						.item3 {
+							order: 3;
+						}
+						.item4 {
+							order: 4;
+						}
+						.item5 {
+							order: 5;
+						}
+						.item6 {
+							order: 6;
+						}
+						.item7 {
+							order: 7;
+						}
+						.item8 {
+							order: 8;
+						}
+						.item9 {
+							order: 9;
+						}
+						.number1 {
+							display: none;
+						}
+						
+						.video_div {
+							position: relative;
+							padding: 0px 0px 25% 0px;
+
+						}
+						.video_div video{
+							position: absolute;
+							object-fit: cover;
+							width: 100%;
+							height: 100%;
+						}
+					}
+
+
 								@media all and (max-width: 1280px) and (min-width: 992px) {
 									.columns-1 {
 										padding-top: 50px;
 									}
 									.title-text1 {
-										font-size: 40px;
-										padding-bottom: 0px;
+										padding-left: 30px;
+										font-size: 30px;
+										line-height: 40px;
 										
 									}
 									.text1-fake {
@@ -1127,15 +1216,14 @@ footer {
 										padding-top: 40px;
 									}
 									.title-text1{
+										font-size: 26px;
 										padding-left: 30px;
-										font-size: 30px;
-										line-height: 40px;
 									}
 									.text1-fake {
 										padding-left: 7.5%;
 									}
-									.text1 {
-										padding: 15px 30px 15px 30px;
+									.text_uder_video {
+										padding: 0px 30px 0px 30px;
 										font-size: 25px;
 										margin-top: 0px;
 										margin-bottom: 50px;
@@ -1146,60 +1234,39 @@ footer {
 									}
 								
 								}
+
+								@media all and (max-width: 677px) and (min-width: 600px) {
+									.title-text1 {
+										padding-left: 0px;
+									}
+								}
+
 								@media all and (max-width: 730px) and (min-width: 600px) {
-									.text1-fake {
-										padding-left: 9.5%;
+									.text_uder_video {
+										padding: 0px 30px 0px 30px;
+										font-size: 25px;
+										margin-top: 0px;
+										margin-bottom: 50px;
 									}
 								}
 
-								@media all and (max-width: 600px) and (min-width: 465px){
+								@media all and (max-width: 600px) and (min-width: 460px){
 									.columns-1 {
 										padding-top: 20px;
 									}
 									.title-text1 {
 										padding-top: 2px;
-										padding-left: 30px;
 										font-size: 25px;
 										line-height: 30px;
-									}
-									.text1-fake {
-										padding-left: 12%;
-									}
-									.text1 {
-										font-size: 20px;
-										padding: 15px 30px 15px 30px;
-										margin-top: 0px;
-										margin-bottom: 50px;
-									}
-									.number1 img {
-										height: 23px;
-										width: auto;
 									}
 								}
 
-								@media all and (max-width: 465px){
+								@media all and (max-width: 460px){
+									.title-text1 {
+										font-size: 20px;
+									}
 									.columns-1 {
 										padding-top: 20px;
-									}
-									.title-text1 {
-										padding-left: 30px;
-										padding-top: 2px;
-										font-size: 25px;
-										line-height: 30px;
-									}
-									.text1-fake {
-										padding-left: 12%;
-									}
-									.text1 {
-										font-size: 20px;
-										line-height: 30px;
-										padding: 15px 30px 15px 30px;
-										margin-top: 0px;
-										margin-bottom: 50px;
-									}
-									.number1 img {
-										height: 23px;
-										width: auto;
 									}
 								}
 
@@ -1736,7 +1803,7 @@ footer {
 
 
 						
-						@media  all and (max-width: 992px){
+						@media all and (max-width: 992px){
 	
 							.button-1 {
 								width: 300px;
@@ -1779,7 +1846,8 @@ footer {
 .cookies {
 	position: fixed;
 	bottom: 0;
-	height: 40px;
+	height: auto;
+	min-height: 50px;
 	width: 100%;
 	font-size: 14px;
 	color: white;
@@ -1794,6 +1862,7 @@ footer {
 	margin-right: 20px;
 	display: flex;
 	align-items: center;
+	row-gap: 10px;
 }
 
 .accept {
@@ -1804,6 +1873,7 @@ footer {
 .decline {
 	cursor: pointer;
 	margin-left: 5px;
+	white-space:nowrap;
 }
 
 .js-open-modal {
@@ -1828,6 +1898,27 @@ footer {
 	padding: 5px 5px 5px 5px;
 	margin-left: 10px;
 }
+
+
+						@media all and (max-width: 767px) {
+							.cookies {
+								flex-direction: column;
+							}
+							.buttons-cookies {
+								margin: 10px 10px 10px 0;
+								align-self: flex-end;
+							}
+							.order_buttons {
+								
+							}
+							.btn-cookies {
+								
+							}
+
+						}
+
+
+
 
 /* Стили для подложки */
 
@@ -1870,6 +1961,7 @@ footer {
 	
 	/*  Побочные стили   */
 	box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+	overflow: scroll;
 
 	padding: 30px;
 	border-radius: 3px;
@@ -2005,5 +2097,11 @@ footer {
 	align-self: flex-start;
 }
 
-
-  
+			@media all and (max-width: 767px) {
+				.modal {
+					width: 80%;
+					max-width: 80%;
+					height: 80%;
+					max-height: 80%;
+				}
+			}
