@@ -6,8 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Oliva Advisory</title>
-	<link rel="icon" href="{%static "images/favicon.ico" %}">
-	<link rel="stylesheet" type="text/css" href="{%static "css/teama_scale_fixing.css" %}">
+	<link rel="icon" href="{%static 'images/favicon.ico' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/teama_scale_fixing.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/cookies.css' %}">
 </head>
 <body>
 	<header class="header">
@@ -60,7 +61,7 @@
 			<div class="list-container">
 				<div class="list">
 					<div class="div_for_arrow">
-						<img class="arrow" src="{%static "images/arrow.png" %}">
+						<img class="arrow" src="{%static 'images/arrow.png' %}">
 					</div>
 					<div class="div_for_paragraph">
 						<p>We are a fast-growing global team united by the shared agile mindset and a passion for delivering excellent service in Business Intelligence, IT, and Recruiting.</p>
@@ -68,7 +69,7 @@
 				</div>
 				<div class="list">
 					<div class="div_for_arrow">
-						<img class="arrow" src="{%static "images/arrow.png" %}">
+						<img class="arrow" src="{%static 'images/arrow.png' %}">
 					</div>
 					<div class="div_for_paragraph">
 						<p>We thrive to deliver high quality products that provide our clients with the most valuable insights.</p>
@@ -90,10 +91,10 @@
 					</p>
 				</div>
 				<div class="photo-member">
-					<img src="{%static "images/Nico.png" %}">
+					<img src="{%static 'images/Nico.png' %}">
 				</div>
 				<div class="linkedin">
-					<a href="https://www.linkedin.com/in/nicooliva/" target="_blank"> <img class="linkedin-icon" src="{%static "images/linkedin.png" %}"></a>
+					<a href="https://www.linkedin.com/in/nicooliva/" target="_blank"> <img class="linkedin-icon" src="{%static 'images/linkedin.png' %}"></a>
 				</div>
 			</div>
 			<div class="about-member">
@@ -142,7 +143,7 @@
 					</p>
 				</div>
 				<div class="photo-member">
-					<img src="{%static "images/Martin.jpg" %}">
+					<img src="{%static 'images/Martin.jpg' %}">
 				</div>
 				<div class="linkedin">
 					<a href="https://www.linkedin.com/in/martin-burmeister-6a03344/" target="_blank"> <img class="linkedin-icon" src="{%static "images/linkedin.png" %}"></a>
@@ -178,10 +179,10 @@
 					</p>
 				</div>
 				<div class="photo-member">
-					<img src="{%static "images/ksenia.png" %}">
+					<img src="{%static 'images/ksenia.png' %}">
 				</div>
 				<div class="linkedin">
-					<a href="https://www.linkedin.com/in/ksenia-ignatchenko-a6a601161/" target="_blank"> <img class="linkedin-icon" src="{%static "images/linkedin.png" %}"></a>
+					<a href="https://www.linkedin.com/in/ksenia-ignatchenko-a6a601161/" target="_blank"> <img class="linkedin-icon" src="{%static 'images/linkedin.png' %}"></a>
 				</div>
 			</div>
 
@@ -217,10 +218,10 @@
 					</p>
 				</div>
 				<div class="photo-member">
-					<img src="{%static "images/Aigerim.jpg" %}">
+					<img src="{%static 'images/Aigerim.jpg' %}">
 				</div>
 				<div class="linkedin">
-					<a href="https://www.linkedin.com/in/aigerim-khairullina-9448b5141/" target="_blank"> <img class="linkedin-icon" src="{%static "images/linkedin.png" %}"></a>
+					<a href="https://www.linkedin.com/in/aigerim-khairullina-9448b5141/" target="_blank"> <img class="linkedin-icon" src="{%static 'images/linkedin.png' %}"></a>
 				</div>
 			</div>
 
@@ -274,7 +275,7 @@
 					<img src="{%static "images/Marina.jpg" %}">
 				</div>
 				<div class="linkedin">
-					<a href="https://www.linkedin.com/in/maryna-samoilenko-68835183/" target="_blank"> <img class="linkedin-icon" src="{%static "images/linkedin.png" %}"></a>
+					<a href="https://www.linkedin.com/in/maryna-samoilenko-68835183/" target="_blank"> <img class="linkedin-icon" src="{%static 'images/linkedin.png' %}"></a>
 				</div>
 			</div>
 
@@ -289,10 +290,10 @@
 					</p>
 				</div>
 				<div class="photo-member">
-					<img src="{%static "images/Anna.jpg" %}">
+					<img src="{%static 'images/Anna.jpg' %}">
 				</div>
 				<div class="linkedin">
-					<a href="https://www.linkedin.com/in/anna-huzenko/" target="_blank"> <img class="linkedin-icon" src="{%static "images/linkedin.png" %}"></a>
+					<a href="https://www.linkedin.com/in/anna-huzenko/" target="_blank"> <img class="linkedin-icon" src="{%static 'images/linkedin.png' %}"></a>
 				</div>
 			</div>
 
@@ -318,4 +319,8 @@
 			<p>© Oliva Advisory GmbH 2019</p>
 		</div>
 	</footer>
+
+	{% if not cookie %}
+		{% include "app1/cookie_modal.html" %}
+	{% endif %}
 </body>

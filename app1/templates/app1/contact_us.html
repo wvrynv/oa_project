@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Oliva Advisory</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/contact_us_scale_fixing.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cookies.css' %}">
 </head>
 <body>
 	<div class="bg-modal">
@@ -107,7 +108,7 @@
 					<label for="name">Name</label>
 				</div>
 				<div class="form">
-					<input class="form" type="text" id="name" name="message_name" placeholder="Your name">
+					<input class="form" type="text" id="name" name="message_name" required placeholder="Your name">
 				</div>
 				<div class="form-phone label-padding">
 					<label for="phone">Phone</label>
@@ -119,13 +120,13 @@
 					<label for="email">Email</label>
 				</div>
 				<div class="form">
-					<input type="text" id="email" name="message_email" placeholder="Your email address">
+					<input type="text" id="email" name="message_email" required placeholder="Your email address">
 				</div>
 				<div class="message label-padding">
 					<label for="email">Message</label>
 				</div>
 				<div class="form">
-					<textarea class="textarea" placeholder="Text your message" id="message" name="message"></textarea>
+					<textarea class="textarea" placeholder="Text your message" required	 id="message" name="message"></textarea>
 				</div>
 				<div class="button-container">
 					<button class="button-1" type="submit">Send</button>
@@ -143,4 +144,8 @@
 			<p>© Oliva Advisory GmbH 2019</p>
 		</div>
 	</footer>
+
+	{% if not cookie %}
+		{% include "app1/cookie_modal.html" %}
+	{% endif %}
 </body>

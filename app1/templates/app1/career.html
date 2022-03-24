@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Oliva Advisory</title>
 	<link rel="stylesheet" type="text/css" href="{%static 'css/career_scale_fixing.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/cookies.css' %}">
 </head>
 <body>
 	<header class="header">
@@ -317,6 +318,10 @@
 			<p>© Oliva Advisory GmbH 2019</p>
 		</div>
 	</footer>
+
+	{% if not cookie %}
+		{% include "app1/cookie_modal.html" %}
+	{% endif %}
 </body>
 <script>
 	function myFunction(id_p, id_btn) {

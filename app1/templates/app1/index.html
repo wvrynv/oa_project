@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Oliva Advisory</title>
 	<link rel="stylesheet" type="text/css" href="{%static 'css/style_grid_fixing_scale.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/cookies.css' %}">
+
 </head>
 <body>
 	<header class=header>
@@ -53,85 +55,39 @@
 		</div>
 	</header>
 
-	<div class="face-main">
+		<div class="face-main">
 		<div class="moto">
 			<div class="title-box">
 				<h1>Bring analytics <br> to your business</h1>
 			</div>
 		</div>
 	</div>
-			
+
 	<div class="block">
 		<div class="columns-1">
 
 			<div class="row1 item item1">
 				<div class="video_div">
-					<video src="{%static 'images/media1.mp4' %}" class="video_div" controls autoplay muted loop>
+					<video src="{%static "images/media1.mp4" %}" class="video_div" autoplay muted loop>
 					</video>
 				</div>
 			</div>
 			<div class="row2 item item4">
 				<div class="video_div">
-					<video src="{%static 'images/media2.mp4' %}" class="video_div" controls autoplay muted loop>
+					<video src="{%static "images/media2.mp4" %}" class="video_div" autoplay muted loop>
 					</video>
 				</div>
 			</div>
 			<div class="row3 item item7">
 				<div class="video_div">
-					<video src="{%static 'images/media3.mp4' %}" class="video_div" controls autoplay muted loop>
+					<video src="{%static "images/media3.mp4" %}" class="video_div" autoplay muted loop>
 					</video>
-			<div class="desktop-list">
-				<div class="list-container">
-					<div class="list">
-						<div class="div_for_arrow">
-							<img class="arrow" src="{% static 'images/arrow.png' %}">
-						</div>
-						<div class="div_for_paragraph">
-							<p>Data Analytics & Business Intelligence</p>
-						</div>
-					</div>
-					<div class="list">
-						<div class="div_for_arrow">
-							<img class="arrow" src="{% static 'images/arrow.png' %}">
-						</div>
-						<div class="div_for_paragraph">
-							<p>Artificial Intelligence and Machine Learning</p>
-						</div>
-					</div>
-					<div class="list">
-						<div class="div_for_arrow">
-							<img class="arrow" src="{%static 'images/arrow.png' %}">
-						</div>
-						<div class="div_for_paragraph">
-							<p>IT Recruiting, Freelancing & Hiring</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="gif">
-			<img class="desk-ai" src="{% static 'images/AI2-unscreen.gif' %}">
-			<img class="mobile-ai" src="{% static 'images/AI2-unscreen_croped.gif' %}">
-		</div>
-		<div class="mobile-list">
-			<div class="list-container">
-				<div class="list">
-					<img class="arrow" src="{% static 'images/arrow.png' %}">
-					<p>Data Analytics & Business Intelligence</p>
-				</div>
-				<div class="list">
-					<img class="arrow" src="{% static 'images/arrow.png' %}">
-					<p>Artificial Intelligence and Machine Learning</p>
-				</div>
-				<div class="list">
-					<img class="arrow" src="{% static 'images/arrow.png' %}">
-					<p>IT Recruiting, Freelancing & Hiring</p>
 				</div>
 			</div>
 			<div class="col1 item2">
 				<div class="title1">
 					<div class="number1">
-						<img src="{% static 'images/num1.png' %}">
+						<img src="{%static 'images/num1.png' %}">
 					</div>
 					<div class="title-text1">
 						Data Analytics & Business Intelligence
@@ -185,14 +141,13 @@
 						<img src="{%static 'images/num3.png' %}">
 					</div>
 					<div class="title-text1 text_uder_video regular-text">
-						We recruit and staff IT Consultants, Developers, Scrum Masters, Business Analysts
+							We recruit and staff IT Consultants, Developers, Scrum Masters, Business Analysts
 					</div>
 				</div>
 			</div>
 
 		</div>
 	</div>
-
 	<div class="parsable-container">
 		<p>We proudly are a trusted partner of:</p>
 		<div>
@@ -287,13 +242,13 @@
 
 
 
-
 		</div>
 	</div>
+
 
 	{% if not cookie %}
 		{% include "app1/cookie_modal.html" %}
 	{% endif %}
-	
+
 </body>
 </html>
