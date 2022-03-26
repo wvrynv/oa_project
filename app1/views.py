@@ -7,6 +7,7 @@ from django.core.mail import message, send_mail
 from django.shortcuts import render
 import datetime
 from django.utils import translation
+from django.contrib import messages
 # Create your views here.
 
 def index(request):
@@ -66,14 +67,18 @@ def contact_us(request):
             settings.EMAIL_HOST_USER, #from email
             (message_email,) #to email(s)
         )
+        messages.success(request, "Message has successfully been sent !")
         context = {
             'message_name': message_name,
-            "cookie": request.COOKIES.get("lang")
+            "cookie": request.COOKIES.get("lang"),
+            "messages": messages
         }
         return render(request, 'app1/contact_us.html', context)
     else:
+        messages.success(request, "Message has successfully been sent !")
         context = {
-            "cookie": request.COOKIES.get("lang")
+            "cookie": request.COOKIES.get("lang"),
+            "messages": messages
         }
         return render(request, 'app1/contact_us.html', context)
 

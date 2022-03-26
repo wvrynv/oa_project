@@ -723,7 +723,7 @@ footer {
 	bottom: 0 !important; 
 	left: 0; 
 	right: 0;
-	margin-bottom:0px !important;
+	margin-bottom: 0 !important;
 }
 
 .block {
@@ -810,6 +810,24 @@ input[type="text"] {
 	background-clip: padding-box, border-box;
 }
 
+input[type="email"] {
+	width: 100%;
+	height: 70px;
+	font-size: 25px;
+	padding: 12px 20px;
+	margin: 0px;
+	display: inline-block;
+	box-sizing: border-box;
+	font-family: "regular";
+	outline: none;
+	color: #E6E6F6;
+	border: 2px solid transparent;
+	border-radius: 16px;
+	background-image: linear-gradient(#03002A, #03002A), linear-gradient(#08F7C5, #00CA73);
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+}
+
 
 									@media all and (max-width: 1280px) and (min-width: 767px){
 										input[type="text"] {
@@ -850,7 +868,6 @@ input[type="text"] {
 		padding-left: 0%;
 		display: flex;
 		justify-content: flex-end;
-		margin-bottom: 170px;
 	}
 
 	.textarea {

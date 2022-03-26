@@ -8,6 +8,109 @@
 	<title>Oliva Advisory</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/contact_us_scale_fixing.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/cookies.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<style>
+    #toast {
+    visibility: hidden;
+    max-width: 50px;
+    height: 50px;
+    /*margin-left: -125px;*/
+    margin: auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+
+    position: fixed;
+    z-index: 1;
+    left: 0;right:0;
+    bottom: 30px;
+    font-size: 17px;
+    white-space: nowrap;
+}
+#toast #img{
+	width: 50px;
+	height: 50px;
+
+    float: left;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    box-sizing: border-box;
+
+
+    background-color: #111;
+    color: #fff;
+}
+#toast #desc{
+
+
+    color: #fff;
+
+    padding: 16px;
+
+    overflow: hidden;
+	white-space: nowrap;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#toast.show {
+    visibility: visible;
+    animation: fadein 0.3s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes expand {
+    from {min-width: 50px}
+    to {min-width: 350px}
+}
+
+@keyframes expand {
+    from {min-width: 50px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes stay {
+    from {min-width: 350px}
+    to {min-width: 350px}
+}
+
+@keyframes stay {
+    from {min-width: 350px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes shrink {
+    from {min-width: 350px;}
+    to {min-width: 50px;}
+}
+
+@keyframes shrink {
+    from {min-width: 350px;}
+    to {min-width: 50px;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 60px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 60px; opacity: 0;}
+}
+</style>
+
 </head>
 <body>
 	<div class="bg-modal">
@@ -102,7 +205,7 @@
 
 	<div class="block">
 		<div class="forms-container">
-			<form class="forms-all" action="{% url 'contact_us' %}" method="post">
+			<form class="forms-all" method="post">
 				{% csrf_token %}
 				<div class="form-name label-padding">
 					<label for="name">Name</label>
@@ -120,7 +223,7 @@
 					<label for="email">Email</label>
 				</div>
 				<div class="form">
-					<input type="text" id="email" name="message_email" required placeholder="Your email address">
+					<input type="email" id="email" name="message_email" required placeholder="Your email address">
 				</div>
 				<div class="message label-padding">
 					<label for="email">Message</label>
@@ -136,7 +239,7 @@
 	</div>
 
 
-	<footer style="margin-top: 40px;">
+	<footer style="margin-top: 100px;">
 		<div>
 			<a href="{% url 'imprint' %}"  target="_blank">Imprint</a>
 		</div>
@@ -148,4 +251,13 @@
 	{% if not cookie %}
 		{% include "app1/cookie_modal.html" %}
 	{% endif %}
+
+	{% if messages %}
+		<div id="toast" class="show"><div id="img"><i class="fa-solid fa-paper-plane"></i></div><div id="desc">
+			{% for message in messages %}
+				{{ message }}
+			{% endfor %}
+		</div></div>
+	{% endif %}
+
 </body>
